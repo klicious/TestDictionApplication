@@ -142,7 +142,17 @@ public class PracticeDictionActivity extends AppCompatActivity {
         }
 
         setFavCharSpinner();
+        ttsInit();
 
+    }
+
+    private void ttsInit() {
+        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                tts.setLanguage(Locale.ENGLISH);
+            }
+        });
     }
 
     private void doSpeak(String text) {
@@ -154,30 +164,19 @@ public class PracticeDictionActivity extends AppCompatActivity {
     }
 
     @SuppressWarnings("deprecation")
-    private void ttsUnder20(final String text) {
+    private void ttsUnder20(String text) {
         final HashMap<String, String> map = new HashMap<>();
         map.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "MessageId");
-        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                tts.setLanguage(Locale.ENGLISH);
-                tts.speak(text, TextToSpeech.QUEUE_FLUSH, map);
-            }
-        });
-        tts.shutdown();
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, map);
+        //tts.shutdown();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    private void ttsGreater21(final String text) {
+    private void ttsGreater21(String text) {
         final String utteranceId=this.hashCode() + "";
-        tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                tts.setLanguage(Locale.ENGLISH);
-                tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
-            }
-        });
-        tts.shutdown();
+        Log.d("HELLO", "This is the text of Speech :: " + text);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
+        //tts.shutdown();
     }
 
     private ArrayList<String> OpenFile(String path) throws IOException {
