@@ -7,15 +7,22 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
+import java.util.Random;
 
 import android.annotation.TargetApi;
+import android.app.Activity;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
+import android.telecom.RemoteConference;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,10 +37,16 @@ import android.widget.TextView;
  */
 public class PracticeDictionActivity extends AppCompatActivity {
 
+    private static final int TTS_DATA_CHECK = 1000;
+    private static final int SPEECH_REQUEST_CODE = 1001;
+    private static final int SPEECH_DATA_CHECK = 1002;
+
     TextView sampleText;
     TextView translation;
     EditText userInput;
     TextView resultText;
+
+    boolean isEnglish = false;
 
     TextToSpeech tts;
 
@@ -141,18 +154,78 @@ public class PracticeDictionActivity extends AppCompatActivity {
             Log.d("HELLO", "eachScript.get(" + i + ").size() = " + eachScript.get(i).size());
         }
 
-        setFavCharSpinner();
-        ttsInit();
+        init();
 
     }
 
+    private void init () {
+        ttsInit();
+        speechInit();
+        setFavCharSpinner();
+    }
+
     private void ttsInit() {
+        Intent intent = new Intent(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+        startActivityForResult(intent, TTS_DATA_CHECK);
+
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
+                isEnglish = true;
                 tts.setLanguage(Locale.ENGLISH);
             }
         });
+    }
+
+    private void speechInit() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS);
+        LanguageDetailsChecker checker = new LanguageDetailsChecker();
+        sendOrderedBroadcast(intent, null, checker, null, Activity.RESULT_OK, null, null);
+        Log.d("HELLO", "Android Speech API :: Language Preference :: " + checker.getLanguagePreference());
+        List<String> sample = checker.getSupportedLanguages();
+        for(String ret : sample) {
+            Log.d("HELLO", "Android Speech API :: Supported Languages :: " + ret);
+        }
+    }
+
+    private void recognizeSpeech() {
+        // 2 Choices, "RecognizerIntent" , "by creating an instance of SpeechRecognizer"
+        // #1 RecognizerIntent
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        // Specify language model
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        // Specify how many results to receive. Results listed in order of confidence
+        intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
+        // Set Language for speech recognition
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        //Start Listening
+        startActivityForResult(intent, SPEECH_REQUEST_CODE);
+    }
+
+    /*
+     * TODO : MAKE A FUNCTION THAT CHANGES ALL LANGUAGE SETTINGS WHEN "SWAPPING" BETWEEN THE LANGUAGES
+      * under recognizeSpeech() RecognizerIntent.EXTRA_LANGUAGE, "en-US" <-> "kor"
+      * isEnglish != isEnglish
+      * tts language settings switch
+     */
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        switch (requestCode) {
+            case TTS_DATA_CHECK :
+                Intent installData = new Intent(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+                startActivity(installData);
+                break;
+
+            case SPEECH_REQUEST_CODE :
+                ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                resultText.setText(result.get(0));
+                break;
+
+            default :
+        }
     }
 
     private void doSpeak(String text) {
@@ -195,11 +268,13 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
     public void onReadSampleTextBtnClicked(View v) {
         String str = sampleText.getText().toString();
+        tts.setLanguage(Locale.ENGLISH);
         doSpeak(str);
     }
 
     public void onReadTranslationTextBtnClicked(View v) {
         String str = translation.getText().toString();
+        tts.setLanguage(Locale.KOREA);
         doSpeak(str);
     }
 
@@ -208,15 +283,35 @@ public class PracticeDictionActivity extends AppCompatActivity {
         doSpeak(str);
     }
 
+    public void onSwapBtnClicked(View v) {
+        isEnglish = !isEnglish;
+        showScripts();
+
+    }
+
     public void onCompleteBtnClicked(View v) {
-        String s = "",t = "";
-        s = sampleText.getText().toString();
-        t = userInput.getText().toString();
-        String result = StringSimilarity.getSimilarity(s, t);
+        String result = StringSimilarity.getSimilarity(sampleText.getText().toString(), userInput.getText().toString());
 
         resultText.setText(result);
 
-        if (scriptIndex[castIndex] < scriptIndexMax[castIndex] - 1){
+        nextIndex();
+        showScripts();
+
+    }
+
+    private void showScripts() {
+        if(isEnglish) {
+            sampleText.setText(eachScript.get(castIndex).get(scriptIndex[castIndex]));
+            // TODO :: TRANSLATION TEXT e.g) translationText.setText(eachScriptTranslation.get(castIndex).get(scriptIndex[castIndex]));
+        } else {
+            // TODO :: SWAP CONTENTS
+            // sampleText.setText(eachScriptTranslation.get(castIndex).get(scriptIndex[castIndex]));
+            // translationText.setText(eachScript.get(castIndex).get(scriptIndex[castIndex]));
+        }
+    }
+
+    private void nextIndex(){
+        if (scriptIndex[castIndex] < scriptIndexMax[castIndex] - 1) {
             scriptIndex[castIndex]++;
         } else {
             castIndex++;
@@ -225,9 +320,12 @@ public class PracticeDictionActivity extends AppCompatActivity {
         if (castIndex >= scriptIndex.length) {
             castIndex = 0;
         }
+    }
 
-        sampleText.setText(eachScript.get(castIndex).get(scriptIndex[castIndex]));
-
+    // generates random number from min(inclusive) to max(exclusive)
+    private int rng(int min, int max) {
+        Random r = new Random();
+        return r.nextInt(max - min) + min;
     }
 
     private void setFavCharSpinner() {
@@ -261,4 +359,41 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
     }
 
+}
+
+class LanguageDetailsChecker extends BroadcastReceiver {
+    private List<String> supportedLanguages;
+
+    private String languagePreference;
+
+    public List<String> getSupportedLanguages() {
+        return supportedLanguages;
+    }
+
+    public void setSupportedLanguages(List<String> supportedLanguages) {
+        this.supportedLanguages = supportedLanguages;
+    }
+
+    public String getLanguagePreference() {
+        return languagePreference;
+    }
+
+    public void setLanguagePreference(String languagePreference) {
+        this.languagePreference = languagePreference;
+    }
+
+    public LanguageDetailsChecker() {
+        languagePreference = "no data";
+    }
+
+    @Override
+    public void onReceive(Context context, Intent intent) {
+        Bundle results = getResultExtras(true);
+        if (results.containsKey(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE)) {
+            languagePreference = results.getString(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE);
+        }
+        if (results.containsKey(RecognizerIntent.EXTRA_SUPPORTED_LANGUAGES)) {
+            supportedLanguages = results.getStringArrayList(RecognizerIntent.EXTRA_SUPPORTED_LANGUAGES);
+        }
+    }
 }
