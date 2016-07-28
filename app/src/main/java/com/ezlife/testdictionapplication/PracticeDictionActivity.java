@@ -17,10 +17,13 @@ import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.telecom.RemoteConference;
 import android.util.Log;
@@ -45,6 +48,7 @@ public class PracticeDictionActivity extends AppCompatActivity {
     TextView translation;
     EditText userInput;
     TextView resultText;
+    String speech;
 
     boolean isEnglish = false;
 
@@ -160,13 +164,17 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
     private void init () {
         ttsInit();
-        speechInit();
+        if (voiceInputAvailable()) {
+            voiceInputDetail();
+        } else {
+            Log.d("HELLO", "VOICE INPUT UNAVAILABLE");
+        }
         setFavCharSpinner();
     }
 
     private void ttsInit() {
-        Intent intent = new Intent(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
-        startActivityForResult(intent, TTS_DATA_CHECK);
+        //Intent intent = new Intent(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+        //startActivityForResult(intent, TTS_DATA_CHECK);
 
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -175,17 +183,6 @@ public class PracticeDictionActivity extends AppCompatActivity {
                 tts.setLanguage(Locale.ENGLISH);
             }
         });
-    }
-
-    private void speechInit() {
-        Intent intent = new Intent(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS);
-        LanguageDetailsChecker checker = new LanguageDetailsChecker();
-        sendOrderedBroadcast(intent, null, checker, null, Activity.RESULT_OK, null, null);
-        Log.d("HELLO", "Android Speech API :: Language Preference :: " + checker.getLanguagePreference());
-        List<String> sample = checker.getSupportedLanguages();
-        for(String ret : sample) {
-            Log.d("HELLO", "Android Speech API :: Supported Languages :: " + ret);
-        }
     }
 
     private void recognizeSpeech() {
@@ -220,8 +217,19 @@ public class PracticeDictionActivity extends AppCompatActivity {
                 break;
 
             case SPEECH_REQUEST_CODE :
-                ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                resultText.setText(result.get(0));
+                if (data != null) {
+                    ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                    speech = "No Data Input";
+                    if (result.size() > 0) {
+                        speech = result.get(0);
+                    }
+                } else {
+                    speech = "No Data Retrieved from voice recognition";
+                }
+                userInput.setText(speech);
+                String result = StringSimilarity.getSimilarity(sampleText.getText().toString(), speech);
+                result = "Result = " + result + "\n Speech = " + speech;
+                resultText.setText(result);
                 break;
 
             default :
@@ -292,11 +300,18 @@ public class PracticeDictionActivity extends AppCompatActivity {
     public void onCompleteBtnClicked(View v) {
         String result = StringSimilarity.getSimilarity(sampleText.getText().toString(), userInput.getText().toString());
 
-        resultText.setText(result);
+        startVoiceRecognitionActivity(sampleText.getText().toString());
+        resultText.setText("Result = " + result + " :: Speech = " + speech);
 
+    }
+
+    public void onSpeakBtnClicked(View v) {
+        startVoiceRecognitionActivity(sampleText.getText().toString());
+    }
+
+    public void onNextBtnClicked(View v) {
         nextIndex();
         showScripts();
-
     }
 
     private void showScripts() {
@@ -358,6 +373,46 @@ public class PracticeDictionActivity extends AppCompatActivity {
         });
 
     }
+
+    /*
+     * VOICE INPUT ACTIVITY/ASSISTANT
+     */
+    private boolean voiceInputAvailable() {
+        PackageManager pm = getApplicationContext().getPackageManager();
+        List<ResolveInfo> activities = pm.queryIntentActivities(
+                new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH), 0);
+        return (activities.size() != 0);
+    }
+
+    private void voiceInputDetail() {
+        Intent intent = new Intent(RecognizerIntent.ACTION_GET_LANGUAGE_DETAILS);
+        LanguageDetailsChecker checker = new LanguageDetailsChecker();
+        getApplicationContext().sendOrderedBroadcast(intent, null, checker, null, Activity.RESULT_OK, null, null);
+        Log.d("HELLO", "Android Speech API :: Language Preference :: " + checker.getLanguagePreference());
+        if (!checker.getLanguagePreference().equals("no data")){
+            List<String> sample = checker.getSupportedLanguages();
+            Log.d("HELLO", "Sample length = " + sample.size());
+            for(String ret : sample) {
+                Log.d("HELLO", "Android Speech API :: Supported Languages :: " + ret);
+            }
+        }
+    }
+
+    /*
+     * Fire an intent to start the speech recognition activity.
+     *
+     * @param prompt Specify the R.string.string_id resource for the prompt-text during voice-recognition here
+     */
+    private void startVoiceRecognitionActivity(String text) {
+        Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+        intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
+        intent.putExtra(RecognizerIntent.EXTRA_PROMPT, text);
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        /* SPEECH_REQUEST_CODE = 1001 */
+        startActivityForResult(intent, SPEECH_REQUEST_CODE);
+    }
+
 
 }
 
