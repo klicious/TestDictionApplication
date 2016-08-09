@@ -1,18 +1,22 @@
 <resources>
     <string name="app_name">TestDictionApplication</string>
+    <string name="sample_text">The Script : </string>
+    <string name="translation_text">Translation : </string>
+    <string name="user_input_text">User Input : </string>
+    <string name="default_font">NanumMyeongjo.otf</string>
+    <string name="user_input_initial_context">Press the Microphone button and repeat after \'the Script\'</string>
+    <string name="action_script_menu">To change the Script!</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_title">Read the Scripts!</string>
     <string-array name="Category_array">
         <item>Drama</item>
-        <item>Movie</item>
-        <item>News</item>
-        <item>Speech</item>
+        <item>Movies</item>
     </string-array>
     <string-array name="Drama_array">
         <item>Friends</item>
-        <item>Lucifer</item>
-        <item>Grey\'s Anatomy</item>
-        <item>Entourage</item>
-        <item>Heroes</item>
-        <item>Park\'s Recreation</item>
+    </string-array>
+    <string-array name="Movies_array">
+        <item>Love_Actually</item>
     </string-array>
     <string-array name="Friends_casts">
         <item>Rachel</item>

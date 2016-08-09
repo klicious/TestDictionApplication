@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -19,19 +20,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
-import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
-import android.telecom.RemoteConference;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 
@@ -43,19 +43,32 @@ public class PracticeDictionActivity extends AppCompatActivity {
     private static final int TTS_DATA_CHECK = 1000;
     private static final int SPEECH_REQUEST_CODE = 1001;
     private static final int SPEECH_DATA_CHECK = 1002;
+    private static final int SETUP_WINDOW = 1003;
+
+    public static final String CATEGORY = "category";
+    public static final String PROGRAM = "program";
+    public static final String SEASON = "season";
+    public static final String EPISODE = "episode";
 
     TextView sampleText;
     TextView translation;
-    EditText userInput;
+    TextView userInput;
     TextView resultText;
-    String speech;
 
-    boolean isEnglish = false;
+    String category, program, season, episode;
+    int lineNumber;
+    String speech;
+    Script display;
+
+    boolean isEnglish;
 
     TextToSpeech tts;
 
     ArrayList<String> script;
     ArrayList<ArrayList<String>> eachScript;
+    ArrayList<Script> theScript;
+    List<Integer> shuffle;
+    Iterator scriptIterator;
     String[] cast = {"Rachel", "Ross", "Monica", "Joey", "Phoebe", "Chandler", "Everyone"};
     int castIndex;
     int[] scriptIndex, scriptIndexMax;
@@ -89,11 +102,11 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
         sampleText = (TextView) findViewById(R.id.sampleContentTextView);
         translation = (TextView) findViewById(R.id.translationContentTextView);
-        userInput = (EditText) findViewById(R.id.userInputContentEditText);
+        userInput = (TextView) findViewById(R.id.userInputContentEditText);
         resultText = (TextView) findViewById(R.id.resultTextView);
 
 
-        script = new ArrayList<String>();
+        /*script = new ArrayList<String>();
         ArrayList<String> fullScript = new ArrayList<String>();
         ArrayList<String> Rachel = new ArrayList<String>();
         ArrayList<String> Ross = new ArrayList<String>();
@@ -101,14 +114,9 @@ public class PracticeDictionActivity extends AppCompatActivity {
         ArrayList<String> Joey = new ArrayList<String>();
         ArrayList<String> Phoebe = new ArrayList<String>();
         ArrayList<String> Chandler = new ArrayList<String>();
-        eachScript = new ArrayList<ArrayList<String>>();
+        eachScript = new ArrayList<ArrayList<String>>();*/
 
-        try {
-            fullScript = OpenFile("Drama/Friends/Season1/Friendstranscript101.txt");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
+        /*
         eachScript.add(Rachel);
         eachScript.add(Ross);
         eachScript.add(Monica);
@@ -133,7 +141,6 @@ public class PracticeDictionActivity extends AppCompatActivity {
                 }
 
             }
-
         }
 
         Comparator<String> x =  new Comparator<String>() {
@@ -157,19 +164,194 @@ public class PracticeDictionActivity extends AppCompatActivity {
             scriptIndexMax[i] = eachScript.get(i).size();
             Log.d("HELLO", "eachScript.get(" + i + ").size() = " + eachScript.get(i).size());
         }
+        */
 
         init();
+/*         int index = 0;
+        for(Script ret : theScript) {
+            Log.d("HELLO", "index = " + index);
+            Log.d("HELLO", "English = " + ret.getEnglish());
+            Log.d("HELLO", "Korean = " + ret.getKorean());
+
+        }*/
 
     }
 
-    private void init () {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.script_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch(item.getItemId()) {
+            case R.id.action_script_menu :
+                callMainActivity();
+                break;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return true;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         ttsInit();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        tts.shutdown();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        tts.stop();
+    }
+
+    private void init () {
+        setTheMenuBar();
+
+        ttsInit();
+
+        voiceInit();
+
+        initValues();
+
+        styleInit();
+
+        languageInit();
+
+        getScript();
+    }
+
+    private void setTheMenuBar() {
+        Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
+        myToolbar.setTitle(R.string.menu_title);
+        setSupportActionBar(myToolbar);
+    }
+
+    private void initValues() {
+        category = "Drama";
+        program = "Friends";
+        season = "01";
+        episode = "01";
+        theScript = new ArrayList<Script>();
+        lineNumber = 0;
+    }
+
+    private void languageInit() {
+        isEnglish = true;
+        setLanguage(isEnglish);
+    }
+
+    private void setLanguage(boolean isEng) {
+        if(isEng) {
+            tts.setLanguage(Locale.ENGLISH);
+        } else {
+            tts.setLanguage(Locale.KOREAN);
+        }
+    }
+
+    private void styleInit() {
+        Typeface font = Typeface.createFromAsset(getAssets(), getString(R.string.default_font));
+        sampleText.setTypeface(font);
+        translation.setTypeface(font);
+        userInput.setTypeface(font);
+        resultText.setTypeface(font);
+    }
+
+    private void getScript() {
+        ArrayList<String> fullScript = new ArrayList<String>();
+        StringBuilder sb = new StringBuilder();
+        theScript.clear();
+        sb.append(category);
+        sb.append("/");
+        sb.append(program);
+        if (category.equals("Drama")) {
+            sb.append("/");
+            sb.append("Season");
+            sb.append(season);
+            sb.append("/");
+            sb.append(program);
+            sb.append("_");
+            sb.append("S");
+            sb.append(season);
+            sb.append("_");
+            sb.append("E");
+            sb.append(episode);
+        }
+        sb.append(".txt");
+
+        String path = sb.toString();
+
+        try {
+            fullScript = OpenFile(path);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String english = "", korean = "";
+        boolean flag = true;
+        for (String ret : fullScript) {
+            if(flag) {
+                flag = false;
+                continue;
+            }
+            if (english == "") {
+                english = ret;
+            } else if(korean == "") {
+                korean = ret;
+                theScript.add(new Script(english, korean));
+                english = "";
+                korean = "";
+            } else {
+                System.out.println(english + " :: " + korean + " :: " + ret);
+            }
+        }
+        shuffleList();
+/*
+        int index = 0;
+        Log.d("HELLO", "the length of THE SCRIPT : " + theScript.size());
+        for(Script ret : theScript) {
+            Log.d("HELLO", "index = " + index);
+            Log.d("HELLO", "English = " + ret.getEnglish());
+            Log.d("HELLO", "Korean = " + ret.getKorean());
+
+        }*/
+    }
+
+    private void voiceInit() {
         if (voiceInputAvailable()) {
             voiceInputDetail();
         } else {
             Log.d("HELLO", "VOICE INPUT UNAVAILABLE");
         }
-        setFavCharSpinner();
+    }
+
+    private void shuffleList() {
+        shuffle = new ArrayList<Integer>();
+        for(int i = 0; i < theScript.size(); i++) {
+            shuffle.add(i);
+        }
+
+        Collections.shuffle(shuffle);
+
+        scriptIterator = shuffle.iterator();
+
+        nextIndex();
+        showScripts();
     }
 
     private void ttsInit() {
@@ -179,8 +361,7 @@ public class PracticeDictionActivity extends AppCompatActivity {
         tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
             public void onInit(int status) {
-                isEnglish = true;
-                tts.setLanguage(Locale.ENGLISH);
+                setLanguage(isEnglish);
             }
         });
     }
@@ -227,10 +408,28 @@ public class PracticeDictionActivity extends AppCompatActivity {
                     speech = "No Data Retrieved from voice recognition";
                 }
                 userInput.setText(speech);
-                String result = StringSimilarity.getSimilarity(sampleText.getText().toString(), speech);
-                result = "Result = " + result + "\n Speech = " + speech;
+                StringSimilarity str = new StringSimilarity();
+                //String result = str.getSimilarity(sampleText.getText().toString(), speech, isEnglish);
+                double resultDouble = str.getSimilarityDouble(sampleText.getText().toString(), speech, isEnglish);
+                //result = "Result = " + result + "\n Speech = " + speech;
+                int resultInt = (int) (resultDouble * 100);
+                //String result = String.format("Your Diction Accuracy is : %.3f", resultDouble);
+                String result = "Your Diction Accuracy is :: " + resultInt + "%";
                 resultText.setText(result);
                 break;
+
+            case SETUP_WINDOW :
+                if (data != null) {
+                    category = data.getStringExtra(CATEGORY);
+                    program = data.getStringExtra(PROGRAM);
+                    if (category.equals("Drama")) {
+                        season = data.getStringExtra(SEASON);
+                        episode = data.getStringExtra(EPISODE);
+                    }
+                    Log.d("HELLO", "c/p/s/e = " + category + program + season + episode);
+                    getScript();
+
+                }
 
             default :
         }
@@ -249,7 +448,6 @@ public class PracticeDictionActivity extends AppCompatActivity {
         final HashMap<String, String> map = new HashMap<>();
         map.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, "MessageId");
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, map);
-        //tts.shutdown();
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
@@ -257,7 +455,6 @@ public class PracticeDictionActivity extends AppCompatActivity {
         final String utteranceId=this.hashCode() + "";
         Log.d("HELLO", "This is the text of Speech :: " + text);
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null, utteranceId);
-        //tts.shutdown();
     }
 
     private ArrayList<String> OpenFile(String path) throws IOException {
@@ -274,31 +471,49 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
     }
 
+    private void callMainActivity() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.putExtra(CATEGORY, category);
+        intent.putExtra(PROGRAM, program);
+        if (category.equals("Drama")) {
+            intent.putExtra(SEASON, season);
+            intent.putExtra(EPISODE, episode);
+        }
+        intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        startActivityForResult(intent, SETUP_WINDOW);
+    }
+    public void onSetUpBtnClicked(View v) {
+        callMainActivity();
+    }
+
     public void onReadSampleTextBtnClicked(View v) {
         String str = sampleText.getText().toString();
-        tts.setLanguage(Locale.ENGLISH);
+        setLanguage(isEnglish);
         doSpeak(str);
     }
 
     public void onReadTranslationTextBtnClicked(View v) {
         String str = translation.getText().toString();
-        tts.setLanguage(Locale.KOREA);
+        setLanguage(!isEnglish);
         doSpeak(str);
     }
 
     public void onReadUserInputTextBtnClicked(View v) {
         String str = userInput.getText().toString();
+        setLanguage(isEnglish);
         doSpeak(str);
     }
 
     public void onSwapBtnClicked(View v) {
         isEnglish = !isEnglish;
+        setLanguage(isEnglish);
         showScripts();
 
     }
 
     public void onCompleteBtnClicked(View v) {
-        String result = StringSimilarity.getSimilarity(sampleText.getText().toString(), userInput.getText().toString());
+        StringSimilarity str = new StringSimilarity();
+        String result = str.getSimilarity(sampleText.getText().toString(), userInput.getText().toString(), isEnglish);
 
         startVoiceRecognitionActivity(sampleText.getText().toString());
         resultText.setText("Result = " + result + " :: Speech = " + speech);
@@ -316,17 +531,18 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
     private void showScripts() {
         if(isEnglish) {
-            sampleText.setText(eachScript.get(castIndex).get(scriptIndex[castIndex]));
+            sampleText.setText(display.getEnglish());
+            translation.setText(display.getKorean());
             // TODO :: TRANSLATION TEXT e.g) translationText.setText(eachScriptTranslation.get(castIndex).get(scriptIndex[castIndex]));
         } else {
             // TODO :: SWAP CONTENTS
-            // sampleText.setText(eachScriptTranslation.get(castIndex).get(scriptIndex[castIndex]));
-            // translationText.setText(eachScript.get(castIndex).get(scriptIndex[castIndex]));
+            sampleText.setText(display.getKorean());
+            translation.setText(display.getEnglish());
         }
     }
 
     private void nextIndex(){
-        if (scriptIndex[castIndex] < scriptIndexMax[castIndex] - 1) {
+        /*if (scriptIndex[castIndex] < scriptIndexMax[castIndex] - 1) {
             scriptIndex[castIndex]++;
         } else {
             castIndex++;
@@ -334,6 +550,10 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
         if (castIndex >= scriptIndex.length) {
             castIndex = 0;
+        }*/
+
+        if (scriptIterator.hasNext()) {
+            display = theScript.get((int) scriptIterator.next());
         }
     }
 
@@ -341,37 +561,6 @@ public class PracticeDictionActivity extends AppCompatActivity {
     private int rng(int min, int max) {
         Random r = new Random();
         return r.nextInt(max - min) + min;
-    }
-
-    private void setFavCharSpinner() {
-        /*
-         * Favorite Character Spinner SETUP
-         */
-
-        Spinner favCharSpinner = (Spinner) findViewById(R.id.favCharSpinner);
-
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
-                this,
-                R.array.Friends_casts,
-                android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        favCharSpinner.setAdapter(adapter);
-
-        favCharSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String favChar = (String) parent.getItemAtPosition(position);
-                castIndex = friends.valueOf(favChar).ordinal();
-                sampleText.setText(eachScript.get(castIndex).get(scriptIndex[castIndex]));
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
     }
 
     /*
@@ -405,10 +594,20 @@ public class PracticeDictionActivity extends AppCompatActivity {
      */
     private void startVoiceRecognitionActivity(String text) {
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+        intent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, new Long(5000));
+        intent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_COMPLETE_SILENCE_LENGTH_MILLIS, new Long(5000));
+        intent.putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_POSSIBLY_COMPLETE_SILENCE_LENGTH_MILLIS, new Long(3000));
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 1);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, text);
-        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        String language;
+        if(isEnglish) {
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "en-US");
+        } else {
+            intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.KOREAN);
+        }
+        intent.putExtra("android.speech.extra.EXTRA_ADDITIONAL_LANGUAGES", new String[]{"en"});
+
         /* SPEECH_REQUEST_CODE = 1001 */
         startActivityForResult(intent, SPEECH_REQUEST_CODE);
     }

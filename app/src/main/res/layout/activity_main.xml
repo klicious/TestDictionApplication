@@ -34,7 +34,7 @@
         android:layout_height="50dp"
         android:orientation="horizontal"
         android:layout_gravity="center_vertical"
-        android:id="@+id/scriptLayout">
+        android:id="@+id/programLayout">
 
         <TextView
             android:layout_width="100dp"

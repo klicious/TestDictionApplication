@@ -1,5 +1,6 @@
 package com.ezlife.testdictionapplication;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
@@ -14,16 +16,17 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    LinearLayout categoryLayout, programLayout, seLayout;
     Button completeBtn;
     ArrayAdapter<CharSequence> adapter;
+
+    String category, program, season, episode;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        setCategorySpinner();
 
         /*tts = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
             @Override
@@ -43,16 +46,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
+        init();
 
+    }
 
+    private void init() {
+        Intent intent = getIntent();
+        category = intent.getStringExtra(PracticeDictionActivity.CATEGORY);
+        program = intent.getStringExtra(PracticeDictionActivity.PROGRAM);
+        if(category.equals("Drama")){
+            season = intent.getStringExtra(PracticeDictionActivity.SEASON);
+            episode = intent.getStringExtra(PracticeDictionActivity.EPISODE);
+        }
+
+        setCategorySpinner();
+        categoryLayout = (LinearLayout) findViewById(R.id.categoryLayout);
+        programLayout = (LinearLayout) findViewById(R.id.programLayout);
+        seLayout = (LinearLayout) findViewById(R.id.seLayout);
+
+        programLayout.setVisibility(View.INVISIBLE);
+        seLayout.setVisibility(View.INVISIBLE);
     }
 
     public void onCompleteBtnClicked(View v) {
         Intent intent = new Intent(getApplicationContext(), PracticeDictionActivity.class);
 
+        intent.putExtra(PracticeDictionActivity.CATEGORY, category);
+        intent.putExtra(PracticeDictionActivity.PROGRAM, program);
+        if (category.equals("Drama")){
+            intent.putExtra(PracticeDictionActivity.SEASON, season);
+            intent.putExtra(PracticeDictionActivity.EPISODE, episode);
+        }
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        startActivityForResult(intent, 1000);
-
+        setResult(Activity.RESULT_OK, intent);
+        finish();
     }
 
     private void setCategorySpinner() {
@@ -74,6 +101,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 setScriptSpinner((String) parent.getItemAtPosition(position));
+                category = (String) parent.getItemAtPosition(position);
+                programLayout.setVisibility(View.VISIBLE);
+                if(category.equals("Drama")){
+                    seLayout.setVisibility(View.VISIBLE);
+                } else {
+                    seLayout.setVisibility(View.INVISIBLE);
+                }
             }
 
             @Override
@@ -89,9 +123,16 @@ public class MainActivity extends AppCompatActivity {
          * Script Spinner SETUP
          */
 
-        int resId = R.array.Category_array;
-        if(category.equals("Drama")){
-            resId = R.array.Drama_array;
+        int resId;
+        switch (category) {
+            case "Drama" :
+                resId = R.array.Drama_array;
+                break;
+            case "Movies" :
+                resId = R.array.Movies_array;
+                break;
+            default:
+                resId = R.array.Category_array;
         }
 
         Spinner scriptSpinner = (Spinner) findViewById(R.id.scriptSpinner);
@@ -107,8 +148,9 @@ public class MainActivity extends AppCompatActivity {
         scriptSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                setSeasonSpinner();
-                setEpisodeSpinner();
+                program = (String) parent.getItemAtPosition(position);
+                setSeasonSpinner(program);
+                setEpisodeSpinner(program);
             }
 
             @Override
@@ -119,15 +161,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setSeasonSpinner(){
+    private void setSeasonSpinner(String program){
+
+        switch (program) {
+            case "Friends" :
+                break;
+            default :
+
+        }
 
         Spinner seasonSpinner = (Spinner) findViewById(R.id.seasonSpinner);
 
         List<String> list = new ArrayList<String>();
 
-        for(int i = 0; i < 10; i++) {
+        for(int i = 0; i < 1; i++) {
             int a = i +1;
-            String value = "Season " + a;
+            String value;
+            if (a < 10) {
+                value = "0" + a;
+            } else {
+                value = String.valueOf(a);
+            }
             list.add(value);
         }
 
@@ -136,18 +190,44 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, list
         );
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         seasonSpinner.setAdapter(dataAdapter);
+
+        seasonSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                season = (String) parent.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 
-    private void setEpisodeSpinner(){
+    private void setEpisodeSpinner(String program){
+
+        switch (program) {
+            case "Friends" :
+                episode = String.valueOf(16);
+                break;
+            default :
+                episode = String.valueOf(10);
+        }
 
         Spinner episodeSpinner = (Spinner) findViewById(R.id.episodeSpinner);
 
         List<String> list = new ArrayList<String>();
 
-        for(int i = 0; i < 24; i++) {
+        for(int i = 0; i < Integer.valueOf(episode); i++) {
             int a = i +1;
-            String value = "Episode " + a;
+            String value;
+            if (a < 10) {
+                value = "0" + a;
+            } else {
+                value = String.valueOf(a);
+            }
             list.add(value);
         }
 
@@ -156,6 +236,19 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item, list
         );
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
         episodeSpinner.setAdapter(dataAdapter);
+
+        episodeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                episode = (String) parent.getItemAtPosition(position);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
     }
 }
