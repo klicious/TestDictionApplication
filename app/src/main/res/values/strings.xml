@@ -1,13 +1,16 @@
 <resources>
-    <string name="app_name">TestDictionApplication</string>
+    <string name="app_name">GreeTalk</string>
     <string name="sample_text">The Script : </string>
     <string name="translation_text">Translation : </string>
     <string name="user_input_text">User Input : </string>
-    <string name="default_font">NanumMyeongjo.otf</string>
+    <string name="default_font">NanumBarunGothicBold.ttf</string>
     <string name="user_input_initial_context">Press the Microphone button and repeat after \'the Script\'</string>
     <string name="action_script_menu">To change the Script!</string>
     <string name="action_settings">Settings</string>
     <string name="menu_title">Read the Scripts!</string>
+    <string name="difference_analysis_header">Difference Analysis : </string>
+    <string name="diction_accuracy_header">Diction Accuracy</string>
+    <string name="show_analysis_btn">SHOW ANALYSIS</string>
     <string-array name="Category_array">
         <item>Drama</item>
         <item>Movies</item>

@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Map;
@@ -20,6 +21,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
+import android.content.res.Resources;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
@@ -27,12 +30,18 @@ import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.ezlife.testdictionapplication.Database.DatabaseManager;
 
 
 /**
@@ -50,17 +59,20 @@ public class PracticeDictionActivity extends AppCompatActivity {
     public static final String SEASON = "season";
     public static final String EPISODE = "episode";
 
+    DatabaseManager dbManager;
+    Script curScript;
+
     TextView sampleText;
     TextView translation;
     TextView userInput;
     TextView resultText;
+    LinearLayout analysisLayout;
 
-    String category, program, season, episode;
-    int lineNumber;
     String speech;
     Script display;
 
     boolean isEnglish;
+    boolean showAnalysis;
 
     TextToSpeech tts;
 
@@ -99,11 +111,6 @@ public class PracticeDictionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_practicediction);
 
         Intent intent = getIntent();
-
-        sampleText = (TextView) findViewById(R.id.sampleContentTextView);
-        translation = (TextView) findViewById(R.id.translationContentTextView);
-        userInput = (TextView) findViewById(R.id.userInputContentEditText);
-        resultText = (TextView) findViewById(R.id.resultTextView);
 
 
         /*script = new ArrayList<String>();
@@ -223,17 +230,26 @@ public class PracticeDictionActivity extends AppCompatActivity {
     private void init () {
         setTheMenuBar();
 
+        initValues();
+
+        initDB();
+
         ttsInit();
 
         voiceInit();
-
-        initValues();
 
         styleInit();
 
         languageInit();
 
         getScript();
+    }
+
+    private void initDB() {
+        dbManager = new DatabaseManager(getApplicationContext());
+        dbManager.openDatabase();
+        //dbManager.openDatabase(username);
+        //curScript = dbManager.getLastScript();
     }
 
     private void setTheMenuBar() {
@@ -243,12 +259,25 @@ public class PracticeDictionActivity extends AppCompatActivity {
     }
 
     private void initValues() {
-        category = "Drama";
-        program = "Friends";
-        season = "01";
-        episode = "01";
+        curScript = new Script();
+        curScript.setUsername("default");
+        curScript.setCategory("Drama");
+        curScript.setProgram("Friends");
+        curScript.setSeason(1);
+        curScript.setEpisode(1);
+        curScript.setLineNumber(0);
+        curScript.setScore(0);
+
+        sampleText = (TextView) findViewById(R.id.sampleContentTextView);
+        translation = (TextView) findViewById(R.id.translationContentTextView);
+        userInput = (TextView) findViewById(R.id.userInputContentEditText);
+        resultText = (TextView) findViewById(R.id.resultTextView);
+        analysisLayout = (LinearLayout) findViewById(R.id.resultAnalysisLayout);
+
         theScript = new ArrayList<Script>();
-        lineNumber = 0;
+
+        showAnalysis = false;
+
     }
 
     private void languageInit() {
@@ -270,27 +299,28 @@ public class PracticeDictionActivity extends AppCompatActivity {
         translation.setTypeface(font);
         userInput.setTypeface(font);
         resultText.setTypeface(font);
+        analysisLayout.setVisibility(LinearLayout.INVISIBLE);
     }
 
     private void getScript() {
         ArrayList<String> fullScript = new ArrayList<String>();
         StringBuilder sb = new StringBuilder();
         theScript.clear();
-        sb.append(category);
+        sb.append(curScript.getCategory());
         sb.append("/");
-        sb.append(program);
-        if (category.equals("Drama")) {
+        sb.append(curScript.getProgram());
+        if (curScript.getCategory().equals("Drama")) {
             sb.append("/");
             sb.append("Season");
-            sb.append(season);
+            sb.append(curScript.getSeasonString());
             sb.append("/");
-            sb.append(program);
+            sb.append(curScript.getProgram());
             sb.append("_");
             sb.append("S");
-            sb.append(season);
+            sb.append(curScript.getSeasonString());
             sb.append("_");
             sb.append("E");
-            sb.append(episode);
+            sb.append(curScript.getEpisodeString());
         }
         sb.append(".txt");
 
@@ -414,19 +444,52 @@ public class PracticeDictionActivity extends AppCompatActivity {
                 //result = "Result = " + result + "\n Speech = " + speech;
                 int resultInt = (int) (resultDouble * 100);
                 //String result = String.format("Your Diction Accuracy is : %.3f", resultDouble);
-                String result = "Your Diction Accuracy is :: " + resultInt + "%";
+                String result = resultInt + "%";
                 resultText.setText(result);
+
+                diff_match_patch dmp = new diff_match_patch();
+
+                if(resultInt > 80) {
+                    // Green
+                    resultText.setTextColor(Color.rgb(76,202,80));
+                } else if(resultInt > 60) {
+                    // Yellow
+                    resultText.setTextColor(Color.rgb(255,193,7));
+                } else {
+                    // Deep Orange
+                    resultText.setTextColor(Color.rgb(255,87,34));
+                }
+
+                /*
+                 * SET WEBVIEW
+                 */
+                LinkedList<diff_match_patch.Diff> diff = dmp.diff_main(speech.toLowerCase(), sampleText.getText().toString().toLowerCase());
+                dmp.diff_cleanupSemantic(diff);
+                WebView webView = (WebView) findViewById(R.id.webView_difference_analysis);
+                // Set background Transparent
+                webView.setBackgroundColor(Color.TRANSPARENT);
+                webView.setLayerType(WebView.LAYER_TYPE_SOFTWARE, null);
+                // Set font size
+                final WebSettings webSettings = webView.getSettings();
+                Resources res = getResources();
+                float fontSize = res.getDimension(R.dimen.webViewTxtSize);
+                webSettings.setDefaultFontSize((int) fontSize);
+
+                webView.loadDataWithBaseURL("file:///android_asset/", dmp.diff_prettyHtml(diff), "text/html", "utf-8", null);
+
+
                 break;
 
             case SETUP_WINDOW :
                 if (data != null) {
-                    category = data.getStringExtra(CATEGORY);
-                    program = data.getStringExtra(PROGRAM);
-                    if (category.equals("Drama")) {
-                        season = data.getStringExtra(SEASON);
-                        episode = data.getStringExtra(EPISODE);
+                    curScript.setCategory(data.getStringExtra(CATEGORY));
+                    curScript.setProgram(data.getStringExtra(PROGRAM));
+                    if (curScript.getCategory().equals("Drama")) {
+                        curScript.setSeasonString(data.getStringExtra(SEASON));
+                        curScript.setEpisodeString(data.getStringExtra(EPISODE));
                     }
-                    Log.d("HELLO", "c/p/s/e = " + category + program + season + episode);
+                    // TODO : Retrieve the last active lineNumber from database and update curScript.setLineNumber(#get the last activity from DB#);
+                    Log.d("HELLO", "c/p/s/e = " + curScript.getCategory() + curScript.getProgram() + curScript.getSeasonString() + curScript.getEpisodeString());
                     getScript();
 
                 }
@@ -473,17 +536,34 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
     private void callMainActivity() {
         Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        intent.putExtra(CATEGORY, category);
-        intent.putExtra(PROGRAM, program);
-        if (category.equals("Drama")) {
-            intent.putExtra(SEASON, season);
-            intent.putExtra(EPISODE, episode);
+        intent.putExtra(CATEGORY, curScript.getCategory());
+        intent.putExtra(PROGRAM, curScript.getProgram());
+        if (curScript.getCategory().equals("Drama")) {
+            intent.putExtra(SEASON, curScript.getSeasonString());
+            intent.putExtra(EPISODE, curScript.getEpisodeString());
         }
         intent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
         startActivityForResult(intent, SETUP_WINDOW);
     }
     public void onSetUpBtnClicked(View v) {
         callMainActivity();
+    }
+
+    public void onShowAnalysisBtnClicked(View v) {
+        showAnalysis = !showAnalysis;
+        if(showAnalysis) {
+            showAnalysisLayout();
+        } else {
+            hideAnalysisLayout();
+        }
+    }
+
+    private void showAnalysisLayout() {
+        analysisLayout.setVisibility(LinearLayout.VISIBLE);
+    }
+
+    private void hideAnalysisLayout() {
+        analysisLayout.setVisibility(LinearLayout.INVISIBLE);
     }
 
     public void onReadSampleTextBtnClicked(View v) {
@@ -553,7 +633,8 @@ public class PracticeDictionActivity extends AppCompatActivity {
         }*/
 
         if (scriptIterator.hasNext()) {
-            display = theScript.get((int) scriptIterator.next());
+            curScript.setLineNumber((int) scriptIterator.next());
+            display = theScript.get(curScript.getLineNumber());
         }
     }
 
@@ -612,6 +693,9 @@ public class PracticeDictionActivity extends AppCompatActivity {
         startActivityForResult(intent, SPEECH_REQUEST_CODE);
     }
 
+    private void addScriptToDB(Script script) {
+
+    }
 
 }
 

@@ -19,4 +19,7 @@ public class KEY {
 
     //TABLES
     public static final String KEY_TABLE_DEFAULT = "default_table";
+
+    // DEFAULTS
+    public static final String KEY_DEFAULT_USERNAME = "default_user";
 }

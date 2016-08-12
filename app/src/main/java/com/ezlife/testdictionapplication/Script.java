@@ -1,5 +1,7 @@
 package com.ezlife.testdictionapplication;
 
+import com.ezlife.testdictionapplication.Database.KEY;
+
 /**
  * Created by Kwon on 2016-08-09.
  */
@@ -25,7 +27,7 @@ public class Script {
     }
 
     private void init() {
-        username = "default_username";
+        username = KEY.KEY_DEFAULT_USERNAME;
     }
 
     public String getCategory() {
@@ -98,5 +100,35 @@ public class Script {
 
     public void setKorean(String korean) {
         Korean = korean;
+    }
+
+    public String getSeasonString() {
+        int a = this.season;
+        String value;
+        if (a < 10) {
+            value = "0" + a;
+        } else {
+            value = String.valueOf(a);
+        }
+        return value;
+    }
+
+    public void setSeasonString(String a) {
+        this.season = Integer.valueOf(a);
+    }
+
+    public String getEpisodeString() {
+        int a = this.episode;
+        String value;
+        if (a < 10) {
+            value = "0" + a;
+        } else {
+            value = String.valueOf(a);
+        }
+        return value;
+    }
+
+    public void setEpisodeString(String a) {
+        this.season = Integer.valueOf(a);
     }
 }

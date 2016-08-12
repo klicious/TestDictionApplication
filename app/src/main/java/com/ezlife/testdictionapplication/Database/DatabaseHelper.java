@@ -47,7 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                         + KEY.KEY_SEASON + " integer, "
                         + KEY.KEY_EPISODE + " integer, "
                         + KEY.KEY_LINE_NUMBER + " integer, "
-                        + KEY.KEY_SCORE + " text, "
+                        + KEY.KEY_SCORE + " integer, "
                         + KEY.KEY_TIME_STAMP + " DATETIME"
                         + ")");
             } else {
