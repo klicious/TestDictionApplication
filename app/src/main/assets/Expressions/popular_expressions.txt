@@ -1,0 +1,515 @@
+﻿498%dont want to%I don't want to talk to him yet%나는 아직 그와 말하고 싶지 않아
+498%dont want to%Then I dont want to live.%그러면 나는 살고 싶지 않아.
+498%dont want to%I dont want to be rude but the prediction is a poor one.%무례하게 굴고 싶지는 않지만 이 예측은 형편없군요.
+498%dont want to%I dont want to blame anyone.%난 누구를 탓하고싶지는 않아.
+498%dont want to%Yeah, you don't want to, I don't want to.%그래, 너도 싫고 나도 싫어.
+278%don't know what%I don't know what happened to you.%나는 너에게 무슨일이 일어났었는지 몰라
+278%don't know what%She's mighty, mighty I really don't know what to tell you.%그녀는 거세고 거세서, 너에게 어떻게 말해야 될지 모르겠어.
+278%don't know what%Look, I don't know what your problem is%저기, 나는 너의 문제가 무엇인지 잘 몰라.
+278%don't know what%There's something afoot here, but I don't know what it is.%여기서 무슨 일이 벌어지고 있지만 무엇인지는 나도 모른다.
+278%don't know what%I don't know what happened up there, but I was so scared.%무슨 일이 있었는 지는 모르겠지만, 정말 무서웠어.
+219%to talk to%I don't want to talk to him.%그 남자 하고 말하기 싫어.
+219%to talk to%My dad says I'm not supposed to talk to you.%아빠가 너랑 얘기하지 말라고 하셨어.
+219%to talk to%She simply hasn't learned how to talk to her superiors.%그녀는 윗사람들에게 얘기하는 방법을 몰라요.
+219%to talk to%Have to be pretty crazy to talk to myself, wouldn't I?%혼잣말하려면 꽤 미쳐야하네, 그렇지 않아?
+219%to talk to%Hello, I need to talk to someone about a billing problem.%안녕하세요, 요금 청구 담당자와 통화하고 싶은데요.
+197%a lot of%The party is a lot of fun.%파티가 너무 재미있다.
+197%a lot of%There are a lot of people from every country.%각국에서 많은 사람들이 왔다.
+197%a lot of%There was a lot of traffic.%차가 많이 막혔었어.
+197%a lot of%A garden needs a lot of care and a lot of love.%정원은 많은 보살핌과 사랑이 필요하다.
+197%a lot of%Guys need a lot of space.%남자들은 많은 공간이 필요하다
+169%don't know if%I don't know if I can adapt to the pressure.%제가 그런 압박에 순응할 수 있을지 모르겠어요.
+169%don't know if%I don't know if it's safe or not.%그게 안전한지 아닌지 모르겠어.
+169%don't know if%I don't know if you'll like it%네가 좋아할지 의문이네
+169%don't know if%Success is often achieved by those who don't know that failure is inevitable.%성공은 종종 실패가 불가피하다는 것을 모르는 사람들에 의해 달성된다.
+169%don't know if%We can not wish for what we don't know.%우리는 모르는 것을 희망할 수는 없다.
+163%have to do%All you have to do is sit tight and wait for it to arrive.%배달될 때까지 기다리기만 하면 됩니다.
+163%have to do%You won't have to do this bullshit any more.%넌 이 개소리를 더이상 하지 않아도 된다
+163%have to do%You really didn't have to do this, but thank you.%당신 정말 이러지 않아도 되는데, 어쨌든 고마워.
+163%have to do%You only have to do as you are told.%당신은 시키는 대로만 하면 됩니다.
+163%have to do%Okay, here’s what you have to do.%좋아요, 그럼 이것 좀 해 주셔야 겠어요.
+162%have to tell%I don't have to tell you how much I miss you.%내가 널 얼마나 보고싶어하는지는 굳이 말을 안해도 알거야.
+162%have to tell%Sooner or later you'll have to tell.%늦든 빠르든 너는 말해야만 할 거야.
+162%have to tell%I have to tell you that I'm very angry with you.%내가 당신한테 대단히 화가 났다는 것을 말해야겠어요.
+162%have to tell%I don't wanna have to tell you again.%너에게 다시는 말하고 싶지 않아.
+162%have to tell%How many times I have to tell you green is not your color?%초록색이 너한테 어울리지 않는다고 내가 몇 번이나 말해줘야 해?
+158%want to be%I don't want to be late.%지각하고 싶지 않아요.
+158%want to be%We don't want to be late for our appointment.%약속시간에 우리 늦어면 안 되잖아요.
+158%want to be%Most of them did not want to be there at all .%그들 대부분은 거기에 가는 것을 결코 원하지 않았다.
+158%want to be%He didn't want to be a daddy, he wasn't ready to be a daddy.%그는 아빠가 되기를 원하지 않았고, 또 그럴 준비가 돼 있지 않았다고 말합니다.
+158%want to be%I don't want to be forgotten.%나는 잊혀지기 싫어.
+156%I'm going to%No, I'm going to the bank first.%아니오, 은행부터 가려고요.
+156%I'm going to%Day after tomorrow, that's exactly what I'm going to do.%내일 모레에, 그게 정확히 내가 할 것이다.
+156%I'm going to%I'm afraid I'm going to have to disappoint you.%너를 실망시키게 될 것 같구나.
+156%I'm going to%I graduate next year and then I'm going to college.%전 내년에 졸업하면 대학교에 입학할 생각이에요.
+156%I'm going to%No, I'm going to miss it. I'll be in Hartford for the day%아니오, 안 갈 거예요. 그 날은 하트퍼드에 있을 거예요.
+150%have to get%I have to get up early, and I have to work hard.%저는 일찍 일어나야 하고, 열심히 일을 해야 합니다.
+150%have to get%Didn't you have to get up early?%일찍 일어났어야 하지 않았니?
+150%have to get%No, I'll have to get some.%없어요, 몇 개 사야겠어요.
+150%have to get%I have to get back soon!%저는 금방 돌아와야 해요.
+150%have to get%You have to get back inside.%넌 안으로 다시 들어가야해.
+135%going to be%Looks like it's going to be a long night.%오늘은 긴 밤이 될 것 같군요.
+135%going to be%What's your major going to be?%뭘 전공하실 예정이에요?
+135%going to be%I'm going to be more affectionate to people this year.%올해에는 사람들에게 좀 더 다정하게 대할 겁니다.
+135%going to be%Yeah, I'm going to be fine.%응 , 나는 괜찮을꺼야
+135%going to be%I'm afraid I'm going to be sick.%나는 아플까봐 두려워.
+135%the rest of%She argued him into doing the rest of the works.%그녀는 그를 설득하여 남은 일을 시켰다.
+135%the rest of%Maybe I'll be alone the rest of my life.%평생 솔로로 살아야할 수도 있겠지 뭐.
+135%the rest of%I'll ride with you the rest of the way.%남은 길을 너와 함께 달릴꺼야
+135%the rest of%The rest of you may go home.%그밖의 사람은 가도 좋다
+135%the rest of%The rest of you stay here.%나머지는 여기 남아라.
+132%I'm gonna go%I think I'm gonna go take a sauna.%나는 사우나를 갈거 같아.
+132%I'm gonna go%Guys, I don't think I'm gonna go dancing tonight.%얘들아, 난 내가 오늘밤 춤추러 갈 것이라고 생각하지 않아.
+132%I'm gonna go%I'm gonna go to sleep in a minute.%나는 조금 있다가 자러 갈거야.
+132%I'm gonna go%I'm gonna go grab a bottle of wine.%나는 와인 한 병 마시러 가려구.
+132%I'm gonna go%I'm gonna go swimming before it gets dark.%난 어두워지기 전에 수영하러 갈거야.
+131%Oh come on%Oh come on, you don't really believe that!%어머, 너 정말 안 믿는구나!
+131%Oh come on%Oh, come on—cheer up%자자, 기운 내!
+131%Oh come on%Oh, come on—you know that isn’t true%에이, 그건 아냐. 그게 사실이 아니라는 건 너도 알잖아!
+131%Oh come on%Oh, come on, I'm not picky.%오, 어이구, 나 안 까다로워.
+131%Oh come on%Oh, come on, don't flatter yourself.%오, 이런, 착각하지마.
+129%have to go%I'm afraid you'll have to go outside if you want to smoke.%담배를 피우시려면 밖으로 나가셔야 합니다.
+129%have to go%No, I don't feel well. I think I'll have to go home early.%아니오, 몸이 좀 안 좋아요. 아무래도 조퇴해야 할 것 같아요.
+129%have to go%I have to go out in a few minutes.%잠시 후에 나가야해요.
+129%have to go%Ok, but better hurry up, I have to go.%좋아요,하지만 좀 서둘러요,난 가야 하니까.
+129%have to go%You don't have to go beyond what's required of you.%당신이 해야 할 일 이외의 것들은 신경쓰지 마세요.
+128%just wanted to%I just wanted to ask you.%난 그저 너에게 묻고 싶었을 뿐이야.
+128%just wanted to%Don't hurt me! I just wanted to sleep.%아프게 하지마! 나 자고 싶다고.
+128%just wanted to%I just wanted to sound smart%나는 단지 현명하게 들리기를 원했다
+128%just wanted to%I just wanted to say it's been a pleasure working with you.%난 그저 너와 일하게 되어 기뻤다고 말하고 싶었어.
+128%just wanted to%I just wanted to prove a point.%나는 단지 그 점을 증명하고 싶었다.
+125%cut to%Let's cut to the chase.%본론으로 들어가시죠.
+125%cut to%The visions tend to cut to the heart of the matter.%공상들이 그 문제의 정곡을 찌르는 경향이 있다.
+125%cut to%Actually he took a pay cut to do the job.%사실 그는 그 일의 임금 삭감을 받아들였다.
+125%cut to%There is no short cut to a solution and no easy answers.%해법에는 지름길이 없으며 쉬운 해답들도 없다.
+125%cut to%You really do cut to the core of things, don't you?%너는 정말로 상황의 정곡을 찌르고 있구나, 그렇지않니?
+123%in front of%The car is in front of the truck.%승용차가 트럭 앞에 있다.
+123%in front of%The girl acted on the high ropes in front of her friends.%친구들 앞에서 그녀는 거만하게 행동했다.
+123%in front of%People are sitting in front of the hotel.%사람들이 호텔 앞에 앉아 있다.
+123%in front of%He gather his girl friend in his arms in front of everybody.%그는 모든 사람 앞에서 그의 여자친구를 끌어안았다.
+123%in front of%Who the hell parked the truck in front of my house?%도대체 우리 집 앞에다 누가 저 트럭을 세워 놨어?
+122%is trying to%It is trying to my nerve.%이것이 나를 신경질 나게 만든다.
+122%is trying to%He is trying to quit smoking.%그는 금연하려고 노력중입니다.
+122%is trying to%Someone is trying to accuse me%누군가 나를 고소하려고 해.
+122%is trying to%The parking lot attendant is trying to get his attention.%주차장 직원이 그 남자의 주의를 끌려고 하고 있어요.
+122%is trying to%This woman is trying to sabotage my work.%이 여자가 내 일을 방해하려고 해요
+120%didn't want to%I did not want, I so didn’t want to.%그러고 싶지 않았고요, 그럴 맘이 전혀 없었습니다.
+120%didn't want to%This is exactly what I didn't want to happen.%이건 내가 절대 일어나길 바라지 않던 일이야
+120%didn't want to%I didn’t want to lie to him.%그에게 거짓말을 하기 싫어
+120%didn't want to%I didn't want to wake you.%너를 깨우기 싫었어
+120%didn't want to%Having failed twice, he didn’t want to try again.%그는 두 번이나 실패하였기 때문에 더 이상 시도할 생각은 없었다.
+105%gonna have to%Eventually, you're gonna have to choose a side.%결국에 너는 편을 골라야만 할것이다
+105%gonna have to%I'm afraid that's gonna have to be a long nap.%낮잠을 좀 오래 자야할 거 같아 걱정입니다.
+105%gonna have to%I'm gonna have to sleep on my back%난 바로 누워서 자야 할 것이다.
+105%gonna have to%That means I'm gonna have to quit smoking.%그것은 내가 담배를 끊은 거라는 것을 의미한다.
+105%gonna have to%Hey, he's gonna have to forgive me, not you%얘, 그는 나를 용서하게 될것같애 니가아니라.
+105%get out of%Get out of the building as soon as possible.%그 건물에서 최대한 빨리 나가라.
+105%get out of%First, turn the ignition off and get out of your car.%먼저 시동을 끄고 차에서 나가세요.
+105%get out of%Tom, it's time to get out of bed!%톰, 일어날 시간이야!
+105%get out of%He faked sickness so he could get out of work.%그는 꾀병을 부려 일을 하지 않으려 했다.
+105%get out of%Let us get out of here.%우리 여기서 나가게 해줘.
+105%go out with%I didn't even want to go out with him in the beginning.%나는 심지어 처음에는 그 남자랑 데이트하기 싫었어.
+105%go out with%That girl is my type. I want go out with her.%저 여자는 내가 좋아하는 타입니다. 그녀와 데이트하고 싶어.
+105%go out with%I don't go out with many different women.%나는 많은 다른 여성들과 교제하고 싶지 않아.
+105%go out with%Will you go out with me next Friday?%다음 주 금요일 나랑 데이트하지 않을래?
+105%go out with%I don't go out with strange men.%나는 낯선 남자들과 데이트하지 않아.
+105%is sitting on%The woman is sitting on the grass.%여자가 잔디밭에 앉아 있다.
+105%is sitting on%The man is sitting on the beach.%남자가 해변가에 앉아 있다.
+105%is sitting on%A couple is sitting on a bench.%커플이 벤치에 앉아있다.
+105%is sitting on%He does not notice that a fly is sitting on the chin.%그는 턱에 파리가 앉아 있는 것을 알아차리지 못하고 있다.
+105%is sitting on%The man is sitting on the truck and reading.%남자가 트럭에 앉아 책을 읽고 있다.
+104%need to talk to%But look, I need to talk to you about a couple of things?%하지만 제말좀 들어보세요. 몇 가지 말씀드릴게 있거든요.
+104%need to talk to%We need to talk to the manager.%점장에게 항의해야겠어.
+104%need to talk to%I don't need to talk to her.%나는 그녀에게 말할 필요가 없다.
+104%need to talk to%Tom, I need to talk to you. I have an ax to grind.%톰, 너한테 해야 할 말이 있다. 불만을 털어놓을 일이 있단 말이다.
+104%need to talk to%Just need to talk to you%말하고 싶은게 있어.
+104%can talk to%I can talk to my son any way I want.%난 내가 원하는대로 내 아들에게 말할 수 있어
+104%can talk to%A family member, perhaps, who can talk to you about this?%혹시, 가족중에 너한테 이걸 말해줄 사람이 있나?
+104%can talk to%I can talk to whoever I want.%나는 내가 얘기하고 싶은 그 누구와도 얘기할 수 있다.
+104%can talk to%I need someone I can talk to.%나는 나와 대화할 수 있는 사람이 필요해
+104%can talk to%I'm glad that I can talk to you now.%지금 당신과 얘기할 수 있어 기뻐요.
+102%I'm not gonna%Don't worry, because I'm not gonna let anything happen.%걱정하지마. 내가 아무 것도 일어나지 않게 할 테니까.
+102%I'm not gonna%But I'm not gonna just pretend like it didn't happen.%하지만 난 이 일이 일어나지 않았던걸로 하려고 했던게 아니야.
+102%I'm not gonna%I'm not gonna do it. I'm not gonna cry%나는 그것을 하지 않을거야. 나는 울지 않을거야.
+102%I'm not gonna%I'm not gonna do this, man!%난 이거 안 할거야!
+102%I'm not gonna%I'm not gonna say it.%나는 그렇게 말하진 않을 거야.
+101%would like to%Treat people as you would like to be treated.%받고 싶은 대로 남을 대하라.
+101%would like to%I would like to be a part of your project.%당신의 프로젝트에 참가하고 싶습니다.
+101%would like to%I would like to do what I want when I want.%제가 내킬 때 원하는 일을 하고 싶습니다.
+101%would like to%Look, I would like to help%이봐요, 난 돕고 싶어요.
+101%would like to%I would like to know more.%나는 더 알고 싶어요.
+99%don't know why%Don't know why she whistled off from me.%나는 왜 그녀가 나한테서 획 가버렸는지 모르겠다.
+99%don't know why%I don't know why you won't tell me what happened%나는 네가 왜 무슨일이 생겼는지 얘기를 해주지 않는지 모르겠어.
+99%don't know why%I don't know why you're not asleep.%네가 왜 잠이 안 드는지 모르겠다.
+99%don't know why%I don't know why it happened.%이 일이 왜 이러났는지 나도 모르겠어
+99%don't know why%And I don't know why because it wasn't funny.%그리고 나는 왜 그게 재미없는 이유인지 모르겠어.
+99%in love with%Simba falls in love with his childhood friend, Nala.%심바는 그의 어린시절 친구인 나라와 사랑에 빠진다.
+99%in love with%Well, I was in love with a man.%응 , 나는 그를 사랑했었어
+99%in love with%I'm in love with this girl.%그 소녀와 사랑에 빠졌어요
+99%in love with%They are in love with each other.%그들은 서로 사랑하는 사이다.
+99%in love with%I’m so in love with you, my darling heart.%나는 정말 너와 사랑에 빠졋어, 내 사랑아
+98%is talking to%His mom is talking to him about his aptitude test record.%그의 어머니는 그의 적성 검사결과에 대해 이야기를 하고 있습니다.
+98%is talking to%The professor is talking to the class.%교수님께서 학생들에게 이야기하고 있다.
+98%is talking to%At the moment, no one is talking to me.%이제 아무도 나와 얘기하지 않는다.
+98%is talking to%Sara is talking to Stuart about his sleeptalking.%새라는 스튜어트에게 그의 잠꼬대에 대해 이야기하고 있다.
+98%is talking to%The boy is talking to his mom.%소년이 엄마와 이야기 하고 있다.
+95%just have to%It was nothing. We'll just have to forgive and forget.%아무것도 아니었으니까, 깨끗이 흘려 보내고 잊기로 하자.
+95%just have to%I just have to smooth out a couple of paragraphs.%몇 단락만 다듬으면 돼.
+95%just have to%You'll just have to decide for yourself.%그냥 너 스스로 결정을 내려야만 될거야.
+95%just have to%I just have to rinse it.%전 그냥 그걸 헹궈야 해요.
+95%just have to%I'll just have to modify the existing software.%나는 기존 소프트웨어를 수정하기만 하면 될 거야.
+94%on the couch%I slept on the couch in the living room.%나는 거실 소파에서 잠을 잤어요.
+94%on the couch%I hope he does not mind sleeping on the couch.%전 그가 소파에서 자는걸 개의치 않길 바래요.
+94%on the couch%Please lie down on the couch.%소파에 누워 주시기 바랍니다.
+94%on the couch%Well, I spend a lot of time on the couch.%글쎄요, 저는 소파 위에서 많은 시간을 보내요.
+94%on the couch%You gonna crash on the couch?%쇼파에서 잘래?
+94%want to get%I want to get the required text for my Biology class.%생물학 수업 시간에 필요한 필수 교재를 사야 해.
+94%want to get%Look, I'm tired and I want to get some sleep.%이봐, 난 지쳐서 잠 좀 자고싶어.
+94%want to get%I really want to get the grocery shopping finished.%장 보던 것 마저 다 봐야 된단 말이에요.
+94%want to get%I just didn't want to get your hopes up.%난 단지 니가 기대하지 않기를 원했어
+94%want to get%I don't really want to get hurt.%나는 사실 다치고 싶지 않다.
+92%a couple of%He's been with this company only for a couple of years.%이 회사에 고작 2년정도 밖에 있지 않았잖아.
+92%a couple of%A couple of times a year that would occur.%그것은 일년에 몇번 일어난다.
+92%a couple of%We should probably leave a couple of days early.%우리는 아마도 이틀정도 일찍 떠나야만 할 거에요.
+92%a couple of%A couple of times I traveled with them.%나는 그들과 여행을 몇번 갔었다.
+92%a couple of%I leave in a couple of days.%전 며칠안에 떠납니다.
+91%don't know what to%I'm speechless. I'm so happy, I don't know what to say.%이루 형용할 수가 없군요. 너무 기뻐서 뭐라고 말해야 할지 모르겠어요.
+91%don't know what to%I don't know what to believe any more.%난 더이상 무엇을 믿어야 할 지 모르겠다.
+91%don't know what to%I don't know what to try first.%무엇부터 해 봐야 할지 모르겠어요.
+91%don't know what to%I really don't know what to tell you.%뭐라 말해드려야 할지 정말 모르겠네요.
+91%don't know what to%I don't know what to say, but thanks.%나는 뭐라고 해야할지 모르겠지만 감사합니다.
+88%what the hell%What the hell are you saying?%도대체 무슨 소리야?
+88%what the hell%What the hell is it this time?%도대체 이번엔 뭐야?
+88%what the hell%What the hell are you doing here?%도대체 너 여기서 뭐하고 있는 거야?
+88%what the hell%What the hell am i gonna wear?%도대체 난 뭘 입을까?
+88%what the hell%I'm working on what the hell it is.%나는 개같은 곳에서 일하고 있어요.
+88%supposed to be%You said nothing that isn't supposed to be there.%넌 거기서 일어날 일을 얘기하지 않았어
+88%supposed to be%Aren't you supposed to be thinking?%너 생각하고 있어야 하지 않아?
+88%supposed to be%Aren't we supposed to be at his house by five o'clock?%우리 5시까지 그 사람 집에 가기로 하지 않았나요?
+88%supposed to be%She's supposed to be quite pretty, or so I've heard.%걔 예쁘데. 적어도 난 그렇게 들었어
+88%supposed to be%Supposed to be a beautiful day.%아름다운 날이어야 했는데.
+87%want to do%I want to do some stretches first.%몸펴기 체조부터 먼저 하고 싶어요.
+87%want to do%Is that something you want to do more of?%그게 무엇보다 해보고 싶은 일이었나요?
+87%want to do%Mommy, I want to do my needs.%엄마, 오줌 마려워
+87%want to do%Other people do not want to do it.%다른 사람들은 그 일을 하기 싫어해요.
+87%want to do%I just really don't want to do this alone%나 정말 이걸 혼자 하고 싶지 않아.
+84%have to be%I'd have to be deaf not to hear you.%니말 안들으려고 귀먹은 척 해야했어
+84%have to be%You're gonna have to be a little more specific.%넌 좀 더 구체적일 필요가 있어
+84%have to be%I'm really glad I don't have to be alone tonight.%오늘밤에 혼자가 아니어도되니 난 너무 기뻐
+84%have to be%It wouldn't necessarily have to be just about you.%이것이 꼭 당신만에 관한 것일 필요는 없습니다.
+84%have to be%I just have to be alone for a minute.%나는 잠시동안 혼자 있어야 한다.
+83%the fact that%Well, that doesn't change the fact that it's a dumb word.%글쎄, 그것은 이게 바보같은 단어라는 사실을 바꾸지 못 해
+83%the fact that%I don't like the fact that they are friends.%전 그들이 친구사이라는 사실이 맘에 들지 않아요.
+83%the fact that%I also like the fact that it has a very mild fragrance.%은은한 향까지 있다는 게 제 마음에 쏙듭니다.
+83%the fact that%I don't care about the fact that they don't care%저는 그들이 신경 쓰지 않는다는 사실을 신경 쓰지 않습니다.
+83%the fact that%She sat down to conceal the fact that she was trembling.%그녀는 자기가 떨고 있다는 걸 감추기 위해 자리에 앉았다.
+80%don't know how%I don't know how many will volunteer to help with this.%몇 사람이나 이걸 자진해서 도와 줄런지 모르겠네요.
+80%don't know how%I don't know how this is happening again.%난 이것이 어떻게 다시 발생했는지 모르겠어.
+80%don't know how%I don't know how else to explain what's happening here.%지금 여기서 벌어지고 있는 일을 달리 어떻게 설명해야될지 모르겠어.
+80%don't know how%I don't know how to dance.%저는 춤을 출 줄 몰라요.
+80%don't know how%I don't know how it happened, but it happened.%그 일이 어떻게 일어났는지는 알 수 없지만, 그 일은 일어났다.
+80%I'm gonna be%Don't panic. I'm gonna be fine.%당황하지마. 난 괜찮을거야.
+80%I'm gonna be%It's depressing to know that I'm gonna be a year older soon.%곧 한 살 더 먹는다고 생각하니까 기분이 우울해요.
+80%I'm gonna be%Doc says I'm gonna be around for years.%의사가 몇 년은 더 살 수 있을거래.
+80%I'm gonna be%I'm gonna be late for my dance class.%댄스 수업에 늦을 것 같아.
+80%I'm gonna be%Two more minutes, and I'm gonna be closer than you are.%2분만에 난 너보다 더 가까이 갈 수 있어.
+79%not going to%No, I'm not going to the concert tonight.%아니, 난 오늘 밤에 콘서트에 가지 않을꺼야.
+79%not going to%Unfortunately, the man was not going to renew his contract.%불행히도 그 남자는 계약을 갱신하려 하지 않았다.
+79%not going to%Initially, it’s not going to be cheap.%처음에는 가격이 싸지 않을 겁니다.
+79%not going to%I'm not going to let you marry him.%네가 그 녀석하고 결혼하는 것을 내버려 두지 않을 거다.
+79%not going to%We are not going to fold.%우린 망하지 않을거야.
+79%want to go%Want to go to the motor show this weekend?%이번 주말에 모터쇼에 갈래?
+79%want to go%Well, I don't want to go to work anymore.%더 이상 직장에 나가기 싫습니다.
+79%want to go%I feel so tired that I want to go back home.%너무 피곤해서 집으로 되돌아가고 싶다.
+79%want to go%Don't you want to go back to when you were young?%가끔씩 어린시절로 돌아가고 싶을 때 없니?
+79%want to go%I didn't even want to go out with him in the beginning.%나는 심지어 처음에는 그 남자랑 데이트하기 싫었어.
+79%one of those%It is one of those prank calls again.%또 그 짓궂은 장난 전화다
+79%one of those%He’s just bought one of those exercise things.%그가 얼마 전에 운동 기구인가 뭐 그런 것을 하나 샀다.
+79%one of those%Changing a fuse is one of those fiddly jobs I hate.%퓨즈 갈기는 내가 싫어하는 성가신 일들 중에 하나다.
+79%one of those%One of those companies went bankrupt six months later.%그 회사들 중 하나는 6개월 후 파산했다.
+79%one of those%This is one of those things that you don't know about me.%이게 바로 네가 나에 관해 모르는 것들 중 하나야.
+76%I'm just gonna%I'm just gonna pay the bill.%그냥 내가 돈낼게
+76%I'm just gonna%I'm just gonna say it straight out.%나는 완전 직접적으로 말할꺼야.
+76%I'm just gonna%I'm just gonna drain the area around your wound.%이제 내가 네 상처 주변에 고름을 짜낼거야.
+76%I'm just gonna%I just don't know how I'm gonna thank you all.%나는 모두에게 어떻게 감사해야할지 모르겠다.
+76%I'm just gonna%I just don't know how I'm gonna look at him again.%내가 그를 다시 어떻게 볼 수 있을지 모르겠어.
+73%trying to get%What exactly are you trying to get across?%정확히 뭘 말하고자 하는 거야?
+73%trying to get%The animals are trying to get over the fence.%동물들이 울타리를 넘으려고 하고 있다.
+73%trying to get%You know, I'm trying to get email reception.%있잖아, 나는 이메일 수신을 받으려고 노력 중이야.
+73%trying to get%I'm trying to get them to eat a healthy breakfast.%저는 그들이 건강한 아침식사를 할 수 있도록 하려고 노력 중입니다.
+73%trying to get%Why doesn't anyone believe I'm trying to get pregnant?%왜 아무도 내가 임신하기 위해 노력하고 있다는 걸 믿지 않는 거지?
+73%I'm sorry but%I'm sorry but this work is above my capability.%죄송하지만 이 일은 제 능력 밖입니다.
+73%I'm sorry but%I'm sorry but he's out of town on business.%죄송하지만 그는 출장중입니다.
+73%I'm sorry but%I'm sorry but, I'm very busy.%죄송하지만, 제가 정말 바쁩니다.
+73%I'm sorry but%Hannan, I'm sorry but I don't quite understand this.%한난, 미안한데 저 이게 잘 이해가 안돼요.
+73%I'm sorry but%I'm sorry but that book is currently out of stock.%죄송하지만 그 책은 현재 품절됐습니다.
+72%I'm so glad%Oh, I'm so glad you didn't.%네가 안 그랬다니 정말 기쁘구나.
+72%I'm so glad%I'm so glad you feel that way.%니가 그렇게 느껴서 나도 무척이나 좋아
+72%I'm so glad%I'm so glad you took time to visit our company.%이렇게 시간을 내어 저희 회사를 방문해 주셔서 정말 기쁩니다.
+72%I'm so glad%I'm so glad you finally decided to do it.%마침내 네가 결정을해서 나는 너무 기뻐
+72%I'm so glad%I'm so glad that you're a part of this team.%나는 너가 이팀의 일원이라는게 너무 기쁘다.
+72%broke up with%Jane broke up with her boyfriend again.%제인은 또 남자 친구하고 헤어졌다
+72%broke up with%He looked blue after he broke up with his girlfriend.%그는 여자친구와 헤어지고 우울해 보였다.
+72%broke up with%He cheated on his wife so she broke up with him.%그가 간통을 저질러 그의 아내는 그를 떠났다.
+72%broke up with%I broke up with him a year ago.%나는 그랑 1년 전에 헤어졌어
+72%broke up with%My girlfriend recently broke up with me.%내 여자친구는 최근에 나와 결별했다.
+69%by the way%You shouldn't judge people by the way they look.%사람을 외모로 판단해서는 안 된다
+69%by the way%By the way, are you still working at the public library?%그건 그렇고, 아직도 공립 도서관에서 일하시나요?
+69%by the way%And by the way,this isn't an emergency.%암튼, 이건 급한 일이 아니야
+69%by the way%By the way, this kind of fun isn't free.%그렇지만 이런 재미는 그냥 얻어지지 않지.
+69%by the way%Who was he, by the way?%그런데 도대체 누구였습니까?
+68%was wondering if%Hello, I was wondering if you delivered?%여보세요, 배달이 되나요?
+68%was wondering if%I was wondering if after work we could grab a cup of coffee?%업무 후에 커피 마시면 어떨지 궁금했었어
+68%was wondering if%I was wondering if I could ask you a favor.%부탁 하나 할 수 있을까요?
+68%was wondering if%I was wondering if you'd walk me home?%네가 날 집까지 걸어서 데려다 줄 수 있으까 하고?
+68%was wondering if%I was wondering if you could help me.%당신이 좀 도와줄 수 있는지 궁금합니다.
+67%is gonna be%Tomorrow is gonna be a busy day.%내일은 정말 바쁠거야.
+67%is gonna be%That is gonna be so great.%너무나도 멋질 거야.
+67%is gonna be%This is gonna be so great. he's gonna flip.%이거 완전 대단한걸 그가 완전 흥분하겠는데
+67%is gonna be%She is gonna be a huge star one day.%그녀는 언젠가 대스타가 될거에요.
+67%is gonna be%Looks like tomorrow is gonna be a very long day.%보아하니 내일은 엄청 힘든 하루가 될 것 같네.
+65%wait a minute%Listen, you're just gonna have to wait a minute.%자, 당신 조금만 더 기다려야 할거야.
+65%wait a minute%Oh, wait a minute, I'll show you how it works.%오, 잠깐만 기다려요, 내가 당신에게 그것이 어떻게 동작하는지 보여줄께요.
+65%wait a minute%Wait a minute, I'll be right back.%1분만 기다려, 바로 돌아올게.
+65%wait a minute%Wait a minute, and don't hang up the phone.%전화 끊지 말고 잠시 기다리세요.
+65%wait a minute%Like I said, you'll have to wait a minute.%내가 이야기했듯이, 넌 1분을 기다려야만 할 거야.
+64%just don't think%Frankly, I just don't think you can help me.%솔직히, 나는 너가 나는 도울수 있을 거라고 생각하지 않는다.
+64%just don't think%I just don't think she ever loved you%난 그냥 그녀가 널 사랑한 적이 없었던 것 같아.
+64%just don't think%I just don't think you understood the joke.%난 네가 농담을 이해했다고는 생각하지 않아.
+64%just don't think%I just don't think I really need it.%나는 그 것이 나에게 꼭 필요하지 않다고 생각한다.
+64%just don't think%I just don't think it's funny.%나는 그것이 웃기다고 생각하지 않아요.
+63%want to talk%I don't want to talk to him.%그 남자 하고 말하기 싫어.
+63%want to talk%I don't want to talk about it anymore for any sake.%어떻든 간에 난 더 이상 그것에 대해 얘기하고 싶지 않아.
+63%want to talk%Why does the man want to talk to Jim?%남자는 왜 짐에게 이야기하려고 하는가?
+63%want to talk%He didn't even want to talk to me.%그는 나와 말하고싶어하지도 않았다.
+63%want to talk%I don't really want to talk about it.%이것에 대해 말하고 싶지 않아.
+63%that would be%Do you ever wonder what that would be like?%넌 그게 어떨지 궁금하게 여긴 적 없어?
+63%that would be%I'd say that would be virtually impossible.%나는 그게 사실상 불가능하다고 말하고 싶어.
+63%that would be%I didn't think that would be enough.%나는 충분할 것이라고 생각하지 않았다.
+63%that would be%I don't think that would be appropriate.%나는 그게 적절하다고 생각하지 않아.
+63%that would be%Well, that would be a reason.%음 그것이 이유가 될순 있네
+61%just a little%I want you to stay just a little longer.%조금만 더 머물었으면 좋겠어
+61%just a little%Don't you think that's just a little bit arrogant?%당신은 그것이 조금 무례하다고 생각하지 않나요?
+61%just a little%I was just a little girl, looking for attention.%나는 단지 관심을 바라는 작은 소녀였습니다.
+61%just a little%So I just wanted to celebrate just a little.%그래서 나는 그냥 조금 축하하고 싶었다.
+61%just a little%Can I ask you something, just a little personal thing?%너한테 뭐 좀 물어봐도 될까, 약간 사적인건데?
+61%I'm gonna get%I'm gonna get my car windows tinted.%내 차에 썬팅 할거야.
+61%I'm gonna get%I'm gonna get out of here before we do something we regret.%나는 우리가 무언가를 후회하기전에 여기서 나갈꺼야.
+61%I'm gonna get%I'm gonna get out of here.%난 여기서 나갈꺼야
+61%I'm gonna get%This time I'm not gonna get taken by surprise.%이번에 나는 깜짝 놀라지 않을거야.
+61%I'm gonna get%I'm gonna get out of here before they get up.%나는 그들이 일어나기전에 여기서 나갈꺼야
+61%to do with%What does the woman want the man to do with the key?%여자는 남자에게 열쇠를 어떻게 하라고 하나?
+61%to do with%I'll decide what to do with him later.%그를 어떻게 할지는 이따가 결정할래.
+61%to do with%What am I supposed to do with the dress?%이 드레스로 제가 뭘 하면 되죠?
+61%to do with%I don't know what to do with myself on rainy days%비오는 날에는 어떻게 시간을 보내야 할지 모르겠어요.
+61%to do with%Nothing to do with my competency.%내 능력과 아무 상관이 없다.
+61%don't think that%I don't think that will happen soon.%나는 그것이 빨리 이루어지지 않을 것 같아.
+61%don't think that%I don't think that will be a problem.%그건 문제없을 겁니다.
+61%don't think that%I don't think that you're gonna let that happen.%당신이 그런 일이 일어나게 두지 않을거라 생각해요.
+61%don't think that%I just don't think that it's appropriate.%난 그냥 그게 적절하지 않다고 생각해
+61%don't think that%Now, don't think that i ever wanted anything else.%이제, 내가 어떤 다른걸 원했었다고 나는 생각하지 않아.
+60%That is so%That is so weird that I didn't even notice that I did that.%내가 그것을 했다는것을 알아 차리지 못했다는것이 희안하다.
+60%That is so%You know, that is so typical.%알잖아, 그거 정말 전형적이야.
+60%That is so%I know, that is so sad.%나도 알아, 그거 정말 슬프다.
+60%That is so%Let me explain why I think that is so important.%내가 설명할게 왜 내가 그것이 굉장히 중요하다고 생각하는지
+60%That is so%Can you explain why that is so?%그것이 왜 그렇게 되는지 설명해 주시겠습니까?
+60%is getting ready for%The man is getting ready for his next customer.%남자는 다음 고객을 위해 준비하고 있다.
+60%is getting ready for%He is getting ready for the job interview%그는 면접 시험을 준비하고 있어요.
+60%is getting ready for%He is now getting ready to run for mayor.%그는 지금 시장에 출마하기 위해 준비하고 있습니다.
+60%is getting ready for%Yes, I'm getting ready for my new semester.%나는 새 학기를 위한 준비를 하고 있어.
+60%is getting ready for%Don't you think you should be getting ready for school%학교 갈 준비해야 하지 않니?
+60%don't care if%I don't care if you're fat.%니가 뚱뚱해도 난 상관없어.
+60%don't care if%I don't care if you don't love me.%네가 날 사랑하지 않는다해도 난 상관없어.
+60%don't care if%I don't care if you don't believe me.%니가 나를 믿던 말던 난 상관안해.
+60%don't care if%I don't care if you don't agree!%니가 나와 동의하지 않든 상관안해!
+60%don't care if%I really don't care if anything was missing.%난 뭔가가 없어졌는지 정말로 신경쓰지 않는다.
+59%know how to%I don't know how to thank you for all of this.%나는 이 모든 것들에 대해 너한테 얼마나 고마운지 몰라.
+59%know how to%He doesn't know how to talk politely.%그는 말버릇이 없어요.
+59%know how to%These days, most people know how to fight the clock.%요새엔, 대부분의 사람들이 시간에 쫓기며 일을 꾸려나가는 방법을 알고 있다.
+59%know how to%I apparently don't know how to dance.%보다시피 난 춤을 출 줄 몰라
+59%know how to%I don't even know how to respond to that.%난 심지어 그거에 어떻게 답해야 할지도 모르겠어.
+39%I'm gonna miss%I'm gonna miss the birth of my child.%내 아이가 태어나는 것을 못보고 말거야
+39%I'm gonna miss%But I'm gonna miss the show!%하지만 공연을 놓치게 되잖아!
+39%I'm gonna miss%To be honest about it, I'm gonna miss you even more.%솔직하게 말해서, 내가 너를 더 그리워할거 같아.
+39%I'm gonna miss%That's why I'm gonna miss you.%그게 내가 너를 그리워하는 이유야
+39%I'm gonna miss%You know what I'm gonna miss the most?%너는 내가 무엇을 제일 그리워 할지 아니?
+58%I mean, come on%I mean, come on, that's a lot of money.%아니 내말은 그건 엄청난 돈이라구
+58%I mean, come on%I mean, come on, give me something juicy.%그러니까, 음, 뭔가 재미난 이야기 없어요?
+58%I mean, come on%I mean, come on, let's be real.%아니 내말은, 그러지말고 현실적으로 생각하자고.
+58%I mean, come on%I mean, come on, I'm a teacher.%내 말은, 그러지 마, 내가 선생님이라니까.
+58%I mean, come on%I mean, come on, you fell for the oldest trick in the book.%아니 내말은, 넌 오래된 장난에 넘어갔다고.
+58%have got to%Billy, we have got to talk.%빌리, 우리 얘기좀 해
+58%have got to%I have got to go number 1.%소변이 마려워요.
+58%have got to%We have got to stabilize her immune system.%우리는 그녀의 면역 체계를 안정시켜야 한다.
+58%have got to%Our batsmen have got to put up a better show.%우리 타자들은 더 좋은 성적을 거두어야합니다.
+58%have got to%They went up too high and now they have got to come down.%그들은 너무 높이 갔다. 그래서 이제 내려와야 한다.
+57%want to have%I want to have the ability to speak English well.%나는 영어를 잘 말할 수 있는 능력을 가지길 원한다.
+57%want to have%Ultimately, I want to have a car of my own.%사실 내 차를 갖고 싶어.
+57%want to have%I don't ever want to have it again.%난 결코 그것을 다시 갖고싶지 않다.
+57%want to have%I want to have more confidence in my English.%난 내 영어에 자신감을 좀 더 얻고 싶어요.
+57%want to have%I don't want to have to compromise what I believe in.%저는 제가 믿는 것과 타협하고 싶고 싶지 않아요
+57%talk to about%I don't like to talk to about it.%그것에 대해서 말하고 싶지 않다
+57%talk to about%There's something that I wanna talk to about.%내가 이야기하고 싶은 것이 있다.
+57%talk to about%Who should I talk to about an error in my paycheck?%내 급여 계산이 잘못 되었는데 누구한테 말해야 하죠?
+57%talk to about%Who should I talk to about it?%이거 누구한테 말해야 하죠?
+57%talk to about%I have no one to talk to about my problems.%고민을 상담할 수 있는 사람이 없어요.
+57%not gonna be%It doesn't mean I'm not gonna be back.%내가 돌아오지 않을 거란 뜻은 아니야
+57%not gonna be%Don't worry, not gonna be late.%걱정하지마.늦지 않을꺼야.
+57%not gonna be%We're not gonna be ordering Christmas cards this year.%우리는 올해 크리스마스카드를 주문하지 않을거야
+57%not gonna be%It's not gonna be you, you know?%그건 너가 되진 않을거야, 알아?
+57%not gonna be%No, I'm afraid we are not gonna be doing that.%아니, 안타깝게도 우리는 그것을 하지 않을 것입니다.
+57%don't want to be%I don't want to be disappointed.%실망하기 싫어.
+57%don't want to be%I don't want to be late.%지각하고 싶지 않아요.
+57%don't want to be%We don't want to be late for our appointment.%약속시간에 우리 늦어면 안 되잖아요.
+57%don't want to be%I don't want to be a moron, I want to be someone.%나는 바보가 아닌 누군가가 되고 싶어.
+57%don't want to be%I don't want to be alone.%난 혼자가 되고 싶지 않아.
+57%a little bit%I'm just maybe a little bit more connected than I've let on.%내 생각보다 내가 좀 더 많이 연루되어 있는 것 같다.
+57%a little bit%Don't you miss me a little bit?%나 조금 그립지 않아?
+57%a little bit%Why don't you lay back for a little bit?%잠시 편히 쉬지 그래?
+57%a little bit%Don't tell me you didn't enjoy this just a little bit.%조금이라도 안즐겼다고 말하지 마세요
+57%a little bit%Why don't we talk for a little bit%우리 잠깐 이야기하는 것 어때?
+57%be able to%It doesn't look like we'll be able to participate.%우리가 참여할 수 있을 것 같지 않아요.
+57%be able to%Will you be able to pick me up after work tonight?%오늘 저녁 퇴근 후에 나를 데리러 올 수 있어요?
+57%be able to%I'll be able to pick you with no problem.%너를 데리러 가는데 아무 문제가 없어.
+57%be able to%I won't be able to do it.%난 그걸 할 수 없을 거야.
+57%be able to%I didn't think they'd actually be able to help you%그들이 정말 도움이 될거라고 생각하지 않았어.
+57%know what to%I'm speechless. I'm so happy, I don't know what to say.%이루 형용할 수가 없군요. 너무 기뻐서 뭐라고 말해야 할지 모르겠어요.
+57%know what to%I don't know what to believe any more.%난 더이상 무엇을 믿어야 할 지 모르겠다.
+57%know what to%I don't even know what to compare it to.%난 무엇과 비교해야할지 조차 모르겠다
+57%know what to%He didn't know what to do as he had a wolf by the ears.%그는 진퇴 양난에 빠져 무엇을 해야 할지 몰랐다.
+57%know what to%I don't know what to fight for.%난 무엇을 위해 싸워야 할지 모르겠어
+57%comes out of%All that comes out of his pen is poor stuff.%저 사람이 쓰는 글은 모두가 태작이다
+57%comes out of%Suddenly, this just comes out of the blue.%갑자기, 이것은 난데없이 온다.
+57%comes out of%After a few days, a duckling comes out of the egg.%며칠 후, 한 새끼 오리가 그 알을 깨고 나온다.
+57%comes out of%It can also be the smoke that comes out of your car%그것은 또한 차에서 나오는 매연일 수도 있어요.
+57%comes out of%The idea of steroids comes out of the idea of winning.%스테로이드제에 대한 발상은 우승을 하겠다는 생각에서 나온다.
+56%the end of%It's as busy Grand Central station at the end of a month.%월말에는 항상 매우 분주하다.
+56%the end of%I understand you’re leaving us at the end of the month.%이 달 말에 우리 회사를 떠나신다고 들었습니다.
+56%the end of%I'll pay at the end of the month.%월말에 지불 할 것 입니다
+56%the end of%At the end of the day it ain't gonna matter.%하루가 끝날때쯤 그것은 중요하지 않을 겁니다.
+56%the end of%I should renew my driver's license by the end of this year.%올해 말 안으로 운전면허증을 갱신해야 해요.
+56%want to take%I want to take a couple of days off next month.%다음 달에 이틀 정도 휴가를 얻고 싶습니다.
+56%want to take%Don't rush me. I want to take it slow.%재촉하지 마. 좀 천천히 진행하고 싶어
+56%want to take%]I just got paid today. Want to take a trip this weekend?%난 오늘 월급받았어. 이번 주말에 여행갈래?
+56%want to take%But I don't want to take off my hat.%하지만 저는 모자를 벗고 싶지 않아요.
+56%want to take%They may want to take treatment into their own hands.%그들은 스스로 치료를 하기를 원할지 모른다.
+56%have no idea%Most people have no idea how to dictate.%사람들은 대부분 받아쓰기하는 방법을 전혀 모른다.
+56%have no idea%Professor I promise you we didnt have no idea.%교수님, 맹세하지만 저희는 몰랐습니다.
+56%have no idea%Her mother's a drug addict and I have no idea where she is.%그녀의 어머니는 약물 중독자인데, 어디에 있는지 전혀 모르겠다.
+56%have no idea%I'm sure I have no idea what you're talking about.%나는 너가 무슨 말을 하는지 이해 못 하는게 확실하다.
+56%have no idea%You guys really have no idea.%당신들은 정말 아무 것도 모르는군요.
+55%used to be%Tom used to be fit as a fiddle. Look at him now!%톰이 예전에는 원기 왕성했는데 말이야. 요즘의 그를 보라고!
+55%used to be%There used to be a traffic cop on the corner.%저쪽 모퉁이에 교통 순경이 있었는데 지금은 없다.
+55%used to be%Look, we used to be friends.%이봐. 우리 친구였잖아!
+55%used to be%She is very different than she used to be.%그녀는 그전과는 상당히 다르다.
+55%used to be%She used to be a beauty.%그녀는 예뻤었다
+43%you're gonna have%Eventually, you're gonna have to choose a side.%결국에 너는 편을 골라야만 할것이다
+43%you're gonna have%You're gonna have to be a little more specific.%넌 좀 더 구체적일 필요가 있어
+43%you're gonna have%I'm sorry, you're gonna have to reschedule%미안합니다, 스케줄을 다시 잡으셔야겠네요.
+43%you're gonna have%You're gonna have to fill in for me.%너는 나 대신 해야만 할거야.
+43%you're gonna have%You're gonna have a great trip.%당신은 정말 멋진 여행을 하게 될거에요.
+39%What happened to%I don't care what happened to him.%그에게 무슨 일이 생기든 난 상관 없어.
+39%What happened to%You didn't deserve what happened to you.%너에게 일어난 일은 니가 받을만한 일은 아니었어.
+39%What happened to%Don't you wanna know what happened to me?%나한테 무슨 일이 있었는지 궁금하지 않아?
+39%What happened to%Say, what happened to your hand?%말해봐, 니 손에 무슨일이 일어난거니?
+39%What happened to%Didn't the other kids know what happened to her?%다른 아이들이 그녀에게 무슨 일이 일어났는지 알고 있지 않니?
+55%the last time%It would not be the last time.%그게 끝이 아닐 것 같았다.
+55%the last time%When was the last time you watched a movie?%마지막으로 영화를 본게 언제 입니까?
+55%the last time%This is the last time I'm traveling coach.%이번이 이코노미석 타기 마지막일 것이다. 
+55%the last time%When's the last time you paid for a dinner?%네가 마지막으로 저녁을 산게 언제지?
+55%the last time%It'll be the last time, I promise.%그게 마지막일거야, 약속할게.
+52%I'd like to%I'd like to sign up for one year subscription to The Forbes.%포브스지 일년 정기 구독을 신청하고 싶은데요.
+52%I'd like to%I'd like to know if it's arrived.%도착했는지 알고 싶습니다.
+52%I'd like to%I'd like to invite you to a party.%파티에 초대하고 싶습니다.
+52%I'd like to%If you don't mind, I'd like to be alone.%괜찮다면, 혼자있고싶어요.
+52%I'd like to%If you'll let me, I'd like to help.%괜찮다면 내가 좀 거들어주고 싶어요.
+52%all the way%The noise could be heard all the way across the room.%저 쪽 방에서 계속 소음이 들렸다.
+52%all the way%The road is uphill all the way.%그 길은 내내 오르막이다.
+52%all the way%Whatever I do, my parents will be behind me all the way.%내가 뭘 하더라도, 부모님은 언제나 날 밀어주실 것이다.
+52%all the way%All the way through, I was bored.%시종일관 나는 지루했다.
+52%all the way%I have read the article all the way through.%그 논문을 쭉 읽어봤다.
+51%have to say%You won't believe what I have to say.%너는 내가 하는 말을 믿지 않을거야.
+51%have to say%You don't have to say. I just wondered.%말하지 않아도 돼. 그냥 궁금했을 뿐이야.
+51%have to say%I don't wanna hear anything you have to say, OK?%당신이 말해야 할 어떤 것도 듣고 싶지 않아요, 알겠어요?
+51%have to say%Well, I have to say, you ain't my type.%글쎄요, 당신이 내 타입이 아니라는 것은 꼭 얘기해야겠네요.
+51%have to say%How many times do I have to say I'm sorry?%미안하다고 도대체 몇 번이나 말해야 하니?
+51%don't have to do%Don't worry, you don't have to do it.%걱정마. 넌 그거 안 해도 돼.
+51%don't have to do%I am so glad I don't have to do that any more.%내가 더 이상 그 일을 하지 않아도 되서 기쁘다.
+51%don't have to do%As if I don't have anything else to do.%마치 내가 아무 것도 하지 않아도 되는 것처럼.
+51%don't have to do%I don't think we have to do that.%내 생각엔 우리 이거 꼭 안해도 되는 것 같아.
+51%don't have to do%Uh, no, you don't have to do that.%어, 아뇨, 그러실 필요 없어요.
+51%I've got%I'm sorry but I've got a meeting in a few minutes.%죄송하지만 잠시 후에 회의가 있어요.
+51%I've got%I've got to get back soon.%저는 금방 돌아와야 해요.
+51%I've got%I've got something quick to tell you.%잠시 할 얘기가 있어요.
+51%I've got%I've got to eat or I'll die!%좀 먹어야지, 아님 죽을 것 같아.
+51%I've got%Sorry, I've got to go out now.%죄송하지만 저 지금 가봐야 해요.
+50%Well at least%Well, at least I don't do this!%일단 적어도 저는 이런 짓은 하지 않았어요!
+50%Well at least%Well, at least he hasn't changed.%글쎄, 적어도 그는 변한게 없어.
+50%Well at least%Well, at least you haven't forgotten that.%음, 적어도 넌 그걸 잊지는 않았잖아.
+50%Well at least%Well, at least I know what I'll be doing Monday morning.%음, 최소한 저는 제가 월요일 아침에 뭘 하게 될지는 알아요.
+50%Well at least%Well, at least not until the end of the year.%적어도 연말까지는 아닙니다.
+50%a bunch of%I drew a bunch of people.%나는 한 무리의 사람들을 데려왔다.
+50%a bunch of%Aren't there are a bunch of companies doing that already?%이미 그런 것을 하고 있는 회사는 엄청나게 많잖아?
+50%a bunch of%I won a bunch of money playing craps.%나는 도박으로 많은 돈을 땄다.
+50%a bunch of%It's just a bunch of papers.%이건 그냥 서류다발일 뿐이에요.
+50%a bunch of%I've got a bunch of problems I'd like to discuss.%의논하고 싶은 문제들이 많아요.
+50%can't believe you're%I can't believe you're saying this.%네가 이런 말을 한다는게 믿기지가 않아.
+50%can't believe you're%I can’t believe you would do this to me!%네가 어떻게 나에게 이럴 수가 있어!
+50%can't believe you're%I can’t believe you’re 28!%난 네가 28살이라는게 믿기지가 않아.
+50%can't believe you're%I can't believe you're still using such primitive methods%아직도 그런 원시적인 방법을 쓰다니 믿기지가 않는다.
+50%can't believe you're%I can't believe it. It seems like you just joined us.%세상에! 갓 입사한 것 같은데.
+50%were going to%I thought you were going to call me. What happened?%저한테 전화하실 줄 알았어요, 어떻게 된거에요?
+50%were going to%I thought you were going to stand me up.%난 네가 날 바람맞히는 줄 알았어.
+50%were going to%You were going to go to New York yesterday, weren’t you?%어제 뉴욕에 가려고 했었죠, 그렇죠?
+50%were going to%You could have let me know you were going to be late!%늦을 거라고 나한테 알려줄 수 도 있었잖아!
+50%were going to%You said you were going to stay out all night!%너 밤새 놀거라고 했잖아!
+50%as long as%Drinking is all right as long as you don't do it to excess.%무리하지 않는 한 음주는 괜찮다.
+50%as long as%As long as I'm alive, that doesn't happen.%내가 살아있는 한, 그것은 일어나지 않아.
+50%as long as%As long as I have them, I'll never be lonely.%나에게 그들이 있는 한, 나는 결코 외롭지 않다.
+50%as long as%Harry promised his love to Helen for as long as he lived.%해리는 헬렌에게 그가 살아있는 한 사랑할 것을 약속했다.
+50%as long as%As long as she doesn't slip up.%그녀가 실수만 하지 않는다면 말이지.
+49%on the phone%The man and woman are talking on the phone.%남자와 여자가 통화하고 있다.
+49%on the phone%He's on the phone all day.%그는 하루종일 전화에 매달려 있어요.
+49%on the phone%She is on the phone, so call back later.%그녀는 지금 통화중이니, 다음에 다시 전화해.
+49%on the phone%Put my sister on the phone.%내 여동생 좀 바꿔줘.
+49%on the phone%Would you put Mr. Taylor back on the phone, please?%테일러씨 좀 다 시 바꿔주실 수 있습니까?
+49%why don't just%If you miss them this much, why don't just go back?%그들이 그렇게나 많이 그립다면, 그냥 돌아가는게 어때?
+49%why don't just%Why don't you just sleep here?%그냥 여기서 자지 그래?
+49%why don't just%Why don't you just relax for a minute?%잠시 좀 쉬지 그래?
+49%why don't just%Why don't you just tell me what happened?%무슨 일이 있었는지 나한테 얘기해주는게 어때?
+49%why don't just%Why don't you just slow down?%조금 속도를 줄이는게 어때?
+49%is looking at%The man is looking at the price on the tag.%남자가 가격표를 보고 있다.
+49%is looking at%Someone is looking at you and waving from across the street.%길 건너편에서 누가 널 보고 손 흔들고 있어.
+49%is looking at%The man is looking at the artwork.%남자가 미술작품을 보고 있어.
+49%is looking at%The man is looking at postcards on the rack.%남자가 진열대에 있는 엽서들을 보고 있다.
+49%is looking at%She is looking at something on the bulletin board.%그녀는 공고판 위의 무언가를 보고 있다.
+48%don't even know%I don't even know how it happens.%난 이게 어떻게 일어난건지 조차도 몰라.
+48%don't even know%And I don't even know if it's useful.%그리고 난 이게 유용할지 모르겠어.
+48%don't even know%I don't even know why they suspected me.%나는 도대체 왜 그들이 날 의심했는지 모르겠어.
+48%don't even know%I don't even know if she ever loved me.%그녀가 날 한 번이라도 좋아했는지 잘 모르겠어.
+48%don't even know%I don't even know what's funny.%난 뭐가 웃긴지 모르겠어.
+48%take care of%I’ll take care of that right away.%곧 처리하겠습니다.
+48%take care of%I'm fine, I take care of me.%괜찮아요. 제 일은 제가 처리할께요.
+48%take care of%Marker, you take care of granny.%마커, 할머니 좀 보살펴드려.
+48%take care of%Would you take care of this gun?%이 총 좀 맡아주실 수 있나요?
+48%take care of%Take care of your health above all things.%무엇보다도 건강 조심해라.
+48%back to%Let's back to the basics and start work with a renewed mind.%초심으로 돌아가고 다시 새로워진 정신으로 시작하자.
+48%back to%Don't talk back to your teacher.%선생님께 말대꾸하지 마라.
+48%back to%Sometimes people want to cast back to their childhood.%가끔 사람들은 자신의 어린 시절을 회상한다.
+48%back to%Don't forget to write back to me.%나에게 답장하는 것을 잊지 마라.
+48%back to%He slept with his back to the wall.%그는 벽에 등을 대고 잤다.
+48%is about to%The train is about to depart!%기차가 막 떠나려고 해요!
+48%is about to%The birthday party is about to be finished.%생일파티가 거의 끝나간다.
+48%is about to%Something terrible is about to happen.%무언가 굉장히 나쁜 일이 곧 벌어질거야.
+48%is about to%Everyone at the office is about to head to the hospital.%사무실에 있는 모든 사람들이 지금 막 병원으로 갈 예정이다.
+48%is about to%A full-scale research is about to begin next month.%다음달 전면적인 조사가 시행 될 예정이다.
+45%move in with%So then I'll just move in with you.%그럼 너랑 같이 살도록 할께.
+45%move in with%How about you move in with me?%너 나랑 같이 사는게 어때?
+45%move in with%You know you didn't have to move in with him.%알다시피 넌 그와 함께 이사올 필요가 없었어.
+45%move in with%I may have to move in with you.%너와 함께 이사를 가야 할지도 몰라
+45%move in with%I'll move back in with mother.%저는 어머니와 함께 다시 이사할 겁니다.
+45%is working on%The man is working on the door.%남자가 문을 고치고 있다.
+45%is working on%She is working on a memoir.%그녀는 회고록을 쓰고 있다.
+45%is working on%She is working on her music with a synthesizer.%그녀는 신시사이저로 음악 작업을 하고 있다.
+45%is working on%The woman is working on her posture.%그녀는 자세를 바로잡고 있다.
+45%is working on%Rowling is working on book five in the series now.%현재 롤링은 <해리 포터> 시리즈의 다섯 번째 이야기를 쓰고 있습니다.

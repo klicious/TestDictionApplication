@@ -102,7 +102,11 @@ public class MainActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 setScriptSpinner((String) parent.getItemAtPosition(position));
                 category = (String) parent.getItemAtPosition(position);
-                programLayout.setVisibility(View.VISIBLE);
+                if(!category.equals(getString(R.string.cat_expressions))) {
+                    programLayout.setVisibility(View.VISIBLE);
+                } else {
+                    programLayout.setVisibility(View.INVISIBLE);
+                }
                 if(category.equals("Drama")){
                     seLayout.setVisibility(View.VISIBLE);
                 } else {

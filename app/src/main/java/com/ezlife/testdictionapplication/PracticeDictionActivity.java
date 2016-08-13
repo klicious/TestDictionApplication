@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -30,7 +29,6 @@ import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -67,6 +65,8 @@ public class PracticeDictionActivity extends AppCompatActivity {
     Script curScript;
 
     TextView sampleText;
+    TextView sampleTextHeader;
+    TextView expressionTextView;
     TextView translation;
     TextView userInput;
     TextView resultText;
@@ -264,6 +264,7 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
     private void initValues() {
         curScript = new Script();
+        curScript.setExpression("");
         curScript.setUsername("default");
         curScript.setCategory("Drama");
         curScript.setProgram("Friends");
@@ -273,6 +274,8 @@ public class PracticeDictionActivity extends AppCompatActivity {
         curScript.setScore(0);
 
         sampleText = (TextView) findViewById(R.id.sampleContentTextView);
+        sampleTextHeader = (TextView) findViewById(R.id.sampleTextView);
+        expressionTextView = (TextView) findViewById(R.id.expressionTextView);
         translation = (TextView) findViewById(R.id.translationContentTextView);
         userInput = (TextView) findViewById(R.id.userInputContentEditText);
         resultText = (TextView) findViewById(R.id.resultTextView);
@@ -304,6 +307,36 @@ public class PracticeDictionActivity extends AppCompatActivity {
         userInput.setTypeface(font);
         resultText.setTypeface(font);
         analysisLayout.setVisibility(LinearLayout.INVISIBLE);
+    }
+
+    private void getExpressions(){
+        theScript.clear();
+        ArrayList<String> fullScript = new ArrayList<>();
+        String path = "Expressions/popular_expressions.txt";
+
+        try {
+            fullScript = OpenFile(path);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        String english = "", korean = "", expression = "", occur = "";
+        int occurence = 0;
+
+        for (String ret : fullScript) {
+            String[] section = ret.split("%");
+            occur = section[0].replaceAll("[^0-9]+","");
+            expression = section[1].trim();
+            english = section[2].trim();
+            korean = section[3].trim();
+            //Log.d("HELLO", occur + " :: " + expression + " :: " + english + " :: " + korean);
+            //Log.d("HELLO", occur);
+
+            occurence = Integer.parseInt(occur);
+
+            theScript.add(new Script(english, korean, expression, occurence));
+        }
+        shuffleList();
     }
 
     private void getScript() {
@@ -494,7 +527,15 @@ public class PracticeDictionActivity extends AppCompatActivity {
                     }
                     // TODO : Retrieve the last active lineNumber from database and update curScript.setLineNumber(#get the last activity from DB#);
                     Log.d("HELLO", "c/p/s/e = " + curScript.getCategory() + curScript.getProgram() + curScript.getSeasonString() + curScript.getEpisodeString());
-                    getScript();
+                    // get appropriate text
+                    if(curScript.getCategory().equals(getString(R.string.cat_expressions))) {
+                        getExpressions();
+                        sampleTextHeader.setText(getString(R.string.sample_text_view_expressions));
+                    } else {
+                        getScript();
+                        sampleTextHeader.setText(getString(R.string.sample_text));
+                    }
+
 
                 }
 
@@ -614,28 +655,21 @@ public class PracticeDictionActivity extends AppCompatActivity {
     }
 
     private void showScripts() {
+        if(curScript.getCategory().equals(getString(R.string.cat_expressions))){
+            expressionTextView.setText("\"" + theScript.get(curScript.getLineNumber()).getExpression() + "\"");
+        } else {
+            expressionTextView.setText("");
+        }
         if(isEnglish) {
             sampleText.setText(display.getEnglish());
             translation.setText(display.getKorean());
-            // TODO :: TRANSLATION TEXT e.g) translationText.setText(eachScriptTranslation.get(castIndex).get(scriptIndex[castIndex]));
         } else {
-            // TODO :: SWAP CONTENTS
             sampleText.setText(display.getKorean());
             translation.setText(display.getEnglish());
         }
     }
 
     private void nextIndex(){
-        /*if (scriptIndex[castIndex] < scriptIndexMax[castIndex] - 1) {
-            scriptIndex[castIndex]++;
-        } else {
-            castIndex++;
-        }
-
-        if (castIndex >= scriptIndex.length) {
-            castIndex = 0;
-        }*/
-
         if (scriptIterator.hasNext()) {
             curScript.setLineNumber((int) scriptIterator.next());
             display = theScript.get(curScript.getLineNumber());

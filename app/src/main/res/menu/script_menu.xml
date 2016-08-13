@@ -5,13 +5,8 @@
     <!-- "Mark Favorite", should appear as action button if possible -->
     <item
         android:id="@+id/action_script_menu"
-        android:icon="@drawable/voice_recognition_icon"
+        android:icon="@drawable/settings_white"
         android:title="@string/action_script_menu"
         app:showAsAction="always"/>
-
-    <!-- Settings, should always be in the overflow -->
-    <item android:id="@+id/action_settings"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
 
 </menu>

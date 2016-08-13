@@ -11,9 +11,9 @@
         android:id="@+id/my_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
+        android:background="#66BB6A"
         android:elevation="4dp"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:theme="@style/ToolBarStyle"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <ScrollView
@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/diction_accuracy_header"
                     android:id="@+id/resultHeaderTextView"
-                    android:textSize="40sp"
+                    android:textSize="30sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
 
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:text="\?%"
                     android:id="@+id/resultTextView"
-                    android:textSize="130sp"
+                    android:textSize="100sp"
                     android:gravity="center"/>
 
             </LinearLayout>
@@ -76,6 +76,17 @@
                     android:textStyle="bold"
                     android:gravity="left"/>
 
+                <TextView
+                    android:layout_width="0px"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:id="@+id/expressionTextView"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textSize="@dimen/subHeadTxtSize"/>
+
                 <ImageButton
                     android:layout_width="50dp"
                     android:layout_height="50dp"
@@ -91,7 +102,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="@dimen/textViewHeight"
                 android:orientation="horizontal"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/sampleTextLayout">
@@ -131,7 +142,7 @@
                     android:id="@+id/translationTextView"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/subHeadTxtSize"
                     android:textStyle="bold"
                     android:gravity="right"/>
 
@@ -140,7 +151,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="@dimen/textViewHeight"
                 android:orientation="horizontal"
                 android:layout_gravity="center_vertical"
                 android:id="@+id/translationLayout">
@@ -217,7 +228,7 @@
                         android:id="@+id/userInputTextView"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="20dp"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/subHeadTxtSize"
                         android:textStyle="bold"
                         android:gravity="right"/>
 
@@ -225,7 +236,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="@dimen/textViewHeight"
                     android:orientation="horizontal"
                     android:layout_gravity="center_vertical"
                     android:id="@+id/userInputLayout">
@@ -264,7 +275,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="20sp"
+                        android:textSize="@dimen/subHeadTxtSize"
                         android:layout_marginLeft="20dp"
                         android:text="@string/difference_analysis_header"
                         android:textStyle="bold"

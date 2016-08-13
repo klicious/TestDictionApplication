@@ -9,21 +9,47 @@ public class Script {
     private String English;
     private String Korean;
 
-    public String username;
-    public String category;
-    public String program;
-    public int season;
-    public int episode;
-    public int score;
-    public int lineNumber;
+    private String username;
+    private String category;
+    private String program;
+    private String expression;
+    private int season;
+    private int episode;
+    private int score;
+    private int lineNumber;
+    private int occurence;
+
 
     public Script(String english, String korean) {
-        English = english;
-        Korean = korean;
+        this.English = english;
+        this.Korean = korean;
     }
+
+    public Script(String english, String korean, String express) {
+        this.expression = express;
+        this.English = english;
+        this.Korean = korean;
+    }
+
+    public Script(String english, String korean, String express, int occur) {
+        this.expression = express;
+        this.English = english;
+        this.Korean = korean;
+        this.occurence = occur;
+    }
+
+
 
     public Script() {
         init();
+    }
+
+    public int getOccurence() {
+        return occurence;
+    }
+
+    public void setOccurence(int occurence) {
+        this.occurence = occurence;
     }
 
     private void init() {
@@ -100,6 +126,14 @@ public class Script {
 
     public void setKorean(String korean) {
         Korean = korean;
+    }
+
+    public String getExpression() {
+        return expression;
+    }
+
+    public void setExpression(String expression) {
+        this.expression = expression;
     }
 
     public String getSeasonString() {
