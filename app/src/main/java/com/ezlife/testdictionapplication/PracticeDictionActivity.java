@@ -46,8 +46,12 @@ import com.ezlife.testdictionapplication.Database.DatabaseManager;
 
 /**
  * Created by Kwon on 2016-07-15.
+ *
+ * Started using git-laptop TODAY() #2016 08 13
  */
 public class PracticeDictionActivity extends AppCompatActivity {
+
+    private static final int SMALL_CHANGE = 12345;
 
     private static final int TTS_DATA_CHECK = 1000;
     private static final int SPEECH_REQUEST_CODE = 1001;
