@@ -36,6 +36,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -71,6 +72,7 @@ public class PracticeDictionActivity extends AppCompatActivity {
     TextView userInput;
     TextView resultText;
     LinearLayout analysisLayout;
+    Button showAnalysisBtn;
 
     String speech;
     Script display;
@@ -280,6 +282,7 @@ public class PracticeDictionActivity extends AppCompatActivity {
         userInput = (TextView) findViewById(R.id.userInputContentEditText);
         resultText = (TextView) findViewById(R.id.resultTextView);
         analysisLayout = (LinearLayout) findViewById(R.id.resultAnalysisLayout);
+        showAnalysisBtn = (Button) findViewById(R.id.showAnalysisBtn);
 
         theScript = new ArrayList<Script>();
 
@@ -597,8 +600,10 @@ public class PracticeDictionActivity extends AppCompatActivity {
     public void onShowAnalysisBtnClicked(View v) {
         showAnalysis = !showAnalysis;
         if(showAnalysis) {
+            showAnalysisBtn.setText(getString(R.string.show_analysis_btn));
             showAnalysisLayout();
         } else {
+            showAnalysisBtn.setText(getString(R.string.hide_analysis_btn));
             hideAnalysisLayout();
         }
     }

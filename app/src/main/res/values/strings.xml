@@ -11,6 +11,7 @@
     <string name="difference_analysis_header">Difference Analysis : </string>
     <string name="diction_accuracy_header">Diction Accuracy</string>
     <string name="show_analysis_btn">SHOW ANALYSIS</string>
+    <string name="hide_analysis_btn">HIDE ANALYSIS</string>
     <string name="cat_expressions">Popular Expressions</string>
     <string name="sample_text_view_expressions">Expression :</string>
     <string-array name="Category_array">
