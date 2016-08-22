@@ -2,18 +2,19 @@
     <string name="app_name">GreeTalk</string>
     <string name="sample_text">The Script : </string>
     <string name="translation_text">Translation : </string>
-    <string name="user_input_text">User Input : </string>
+    <string name="user_input_text">What you said : </string>
     <string name="default_font">NanumBarunGothicBold.ttf</string>
     <string name="user_input_initial_context">Press the Microphone button and repeat after \'the Script\'</string>
     <string name="action_script_menu">To change the Script!</string>
     <string name="action_settings">Settings</string>
     <string name="menu_title">GreeTalk</string>
-    <string name="difference_analysis_header">Difference Analysis : </string>
+    <string name="difference_analysis_header">Difference : </string>
     <string name="diction_accuracy_header">Diction Accuracy</string>
     <string name="show_analysis_btn">SHOW ANALYSIS</string>
     <string name="hide_analysis_btn">HIDE ANALYSIS</string>
     <string name="cat_expressions">Popular Expressions</string>
     <string name="sample_text_view_expressions">Expression :</string>
+    <string name="voice_recognition_fail">Voice recognition failed!</string>
     <string-array name="Category_array">
         <item>Drama</item>
         <item>Popular Expressions</item>

@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/diction_accuracy_header"
                     android:id="@+id/resultHeaderTextView"
-                    android:textSize="30sp"
+                    android:textSize="28sp"
                     android:textStyle="bold"
                     android:gravity="center"/>
 
@@ -44,7 +44,7 @@
                     android:layout_height="wrap_content"
                     android:text="\?%"
                     android:id="@+id/resultTextView"
-                    android:textSize="100sp"
+                    android:textSize="96sp"
                     android:gravity="center"/>
 
             </LinearLayout>
@@ -55,8 +55,8 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
                     android:text="READ"
                     android:id="@+id/readSampleTextBtn"
                     android:layout_gravity="center"
@@ -72,7 +72,7 @@
                     android:id="@+id/sampleTextView"
                     android:layout_gravity="center_vertical"
                     android:layout_marginLeft="10dp"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/subHeadTxtSize"
                     android:textStyle="bold"
                     android:gravity="left"/>
 
@@ -88,8 +88,8 @@
                     android:textSize="@dimen/subHeadTxtSize"/>
 
                 <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
                     android:text="SWAP"
                     android:id="@+id/swapBtn"
                     android:layout_gravity="center"
@@ -126,8 +126,8 @@
                 android:orientation="horizontal">
 
                 <ImageButton
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="@dimen/iconSize"
+                    android:layout_height="@dimen/iconSize"
                     android:id="@+id/readTranslationTextBtn"
                     android:layout_gravity="center"
                     android:src="@drawable/headphone_icon"
@@ -172,7 +172,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/iconSize"
                 android:orientation="horizontal"
                 android:gravity="center_horizontal"
                 android:id="@+id/completeBtnLayout">
@@ -243,8 +243,8 @@
 
 
                     <ImageButton
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="@dimen/iconSize"
+                        android:layout_height="@dimen/iconSize"
                         android:id="@+id/readUserInputTextBtn"
                         android:layout_gravity="center"
                         android:src="@drawable/headphone_icon"

@@ -475,7 +475,7 @@ public class PracticeDictionActivity extends AppCompatActivity {
                         speech = result.get(0);
                     }
                 } else {
-                    speech = "No Data Retrieved from voice recognition";
+                    speech = getString(R.string.voice_recognition_fail);
                 }
                 userInput.setText(speech);
                 StringSimilarity str = new StringSimilarity();
@@ -492,12 +492,15 @@ public class PracticeDictionActivity extends AppCompatActivity {
                 if(resultInt > 80) {
                     // Green
                     resultText.setTextColor(Color.rgb(76,202,80));
+                    userInput.setTextColor(Color.rgb(76,202,80));
                 } else if(resultInt > 60) {
                     // Yellow
                     resultText.setTextColor(Color.rgb(255,193,7));
+                    userInput.setTextColor(Color.rgb(255,193,7));
                 } else {
                     // Deep Orange
                     resultText.setTextColor(Color.rgb(255,87,34));
+                    userInput.setTextColor(Color.rgb(255,87,34));
                 }
 
                 /*
