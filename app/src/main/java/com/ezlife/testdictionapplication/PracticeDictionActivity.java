@@ -248,7 +248,18 @@ public class PracticeDictionActivity extends AppCompatActivity {
 
         languageInit();
 
-        getScript();
+        initContent();
+    }
+
+    private void initContent() {
+        // get appropriate text
+        if(curScript.getCategory().equals(getString(R.string.cat_expressions))) {
+            getExpressions();
+            sampleTextHeader.setText(getString(R.string.sample_text_view_expressions));
+        } else {
+            getScript();
+            sampleTextHeader.setText(getString(R.string.sample_text));
+        }
     }
 
     private void initDB() {
@@ -268,8 +279,8 @@ public class PracticeDictionActivity extends AppCompatActivity {
         curScript = new Script();
         curScript.setExpression("");
         curScript.setUsername("default");
-        curScript.setCategory("Drama");
-        curScript.setProgram("Friends");
+        curScript.setCategory(getString(R.string.cat_expressions));
+        curScript.setProgram("");
         curScript.setSeason(1);
         curScript.setEpisode(1);
         curScript.setLineNumber(0);
@@ -468,21 +479,25 @@ public class PracticeDictionActivity extends AppCompatActivity {
                 break;
 
             case SPEECH_REQUEST_CODE :
+                speech = "";
                 if (data != null) {
                     ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
-                    speech = "No Data Input";
                     if (result.size() > 0) {
                         speech = result.get(0);
+                        userInput.setText(speech);
                     }
                 } else {
-                    speech = getString(R.string.voice_recognition_fail);
+                    userInput.setText(getString(R.string.voice_recognition_fail));
                 }
-                userInput.setText(speech);
+
                 StringSimilarity str = new StringSimilarity();
                 //String result = str.getSimilarity(sampleText.getText().toString(), speech, isEnglish);
                 double resultDouble = str.getSimilarityDouble(sampleText.getText().toString(), speech, isEnglish);
                 //result = "Result = " + result + "\n Speech = " + speech;
-                int resultInt = (int) (resultDouble * 100);
+                int resultInt = 0;
+                if(!speech.equals(null)) {
+                    resultInt = (int) (resultDouble * 100);
+                }
                 //String result = String.format("Your Diction Accuracy is : %.3f", resultDouble);
                 String result = resultInt + "%";
                 resultText.setText(result);
@@ -533,7 +548,7 @@ public class PracticeDictionActivity extends AppCompatActivity {
                     }
                     // TODO : Retrieve the last active lineNumber from database and update curScript.setLineNumber(#get the last activity from DB#);
                     Log.d("HELLO", "c/p/s/e = " + curScript.getCategory() + curScript.getProgram() + curScript.getSeasonString() + curScript.getEpisodeString());
-                    // get appropriate text
+
                     if(curScript.getCategory().equals(getString(R.string.cat_expressions))) {
                         getExpressions();
                         sampleTextHeader.setText(getString(R.string.sample_text_view_expressions));
@@ -541,8 +556,6 @@ public class PracticeDictionActivity extends AppCompatActivity {
                         getScript();
                         sampleTextHeader.setText(getString(R.string.sample_text));
                     }
-
-
                 }
 
             default :
