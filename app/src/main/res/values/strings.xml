@@ -16,8 +16,8 @@
     <string name="sample_text_view_expressions">Expression :</string>
     <string name="voice_recognition_fail">Voice recognition failed!</string>
     <string-array name="Category_array">
-        <item>Drama</item>
         <item>Popular Expressions</item>
+        <item>Drama</item>
     </string-array>
     <string-array name="Drama_array">
         <item>Friends</item>

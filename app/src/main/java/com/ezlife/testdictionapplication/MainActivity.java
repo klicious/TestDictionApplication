@@ -97,6 +97,11 @@ public class MainActivity extends AppCompatActivity {
 
         categorySpinner.setAdapter(adapter);
 
+        if(!category.equals(null)) {
+            int spinnerPosition = adapter.getPosition(category);
+            categorySpinner.setSelection(spinnerPosition);
+        }
+
         categorySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -149,6 +154,11 @@ public class MainActivity extends AppCompatActivity {
 
         scriptSpinner.setAdapter(adapter);
 
+        if(!program.equals(null)) {
+            int spinnerPosition = adapter.getPosition(program);
+            scriptSpinner.setSelection(spinnerPosition);
+        }
+
         scriptSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -196,6 +206,13 @@ public class MainActivity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         seasonSpinner.setAdapter(dataAdapter);
+/*
+
+        if(!season.equals(null)) {
+            int spinnerPosition = adapter.getPosition(season);
+            seasonSpinner.setSelection(spinnerPosition);
+        }
+*/
 
         seasonSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -242,6 +259,13 @@ public class MainActivity extends AppCompatActivity {
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         episodeSpinner.setAdapter(dataAdapter);
+/*
+
+        if(!episode.equals(null)) {
+            int spinnerPosition = adapter.getPosition(episode);
+            episodeSpinner.setSelection(spinnerPosition);
+        }
+*/
 
         episodeSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
